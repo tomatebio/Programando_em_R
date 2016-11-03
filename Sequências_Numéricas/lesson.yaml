@@ -1,0 +1,127 @@
+- Class: meta
+  Course: Programando em R
+  Lesson: Sequências Numéricas
+  Author: Nick Carchedi
+  Type: Standard
+  Organization: JHU Biostat
+  Version: 2.2.0
+  Translation: Rogerio B Alves (ptbr - version 1.0)
+
+- Class: text
+  Output: "Nesta lição você aprenderá como criar sequências de números no R."
+  
+- Class: cmd_question
+  Output: "A maneira mais simples para criar uma sequência de números no R é usar o operador `:`. Digite 1:20 para ver como isso funciona."
+  CorrectAnswer: '1:20'
+  AnswerTests: omnitest(correctExpr='1:20')
+  Hint: "Digite 1:20 sem espaços. Certifique-se de usar dois pontos e NÃO ponto e vírgula."
+
+- Class: cmd_question
+  Output: "Isso nos deu cada inteiro entre (e incluindo) 1 e 20. Nós poderíamos usa-lo também para criar uma sequência de números reais. Por exemplo, tente pi:10."
+  CorrectAnswer: 'pi:10'
+  AnswerTests: omnitest(correctExpr='pi:10')
+  Hint: "Digite pi:10 e veja o que acontece. pi é uma constante predeterminada em R que assume o valor de 3.1415...."
+
+- Class: text
+  Output: "O resultado é um vetor de números reais começando com pi (3.142...) e aumentando com incrementos de 1. O limite superior de 10 nunca é atingido, pois o próximo número em nossa sequência seria maior que 10."
+  
+- Class: cmd_question
+  Output: "O que acontece se fizermos 15:1? Tente e descubra."
+  CorrectAnswer: '15:1'
+  AnswerTests: omnitest(correctExpr='15:1')
+  Hint: "Digite 15:1 and aperte Enter."
+
+- Class: text
+  Output: "Contou regressivamente com incrementos de 1! É improvável que precisemos desse recurso, mas a despeito disso é bom saber como isso pode acontecer."
+  
+- Class: text
+  Output: "Lembre-se que se você tiver dúvidas a respeito de uma determinada função em R, você pode acessar a documentação com o ponto de interrogação seguido do nome da função: ?nome_da_função_aqui. Entretanto, no caso de um operador como os dois pontos usados acima, você deve colocar o símbolo entre apóstrofes desta forma: ?';'. (Nota: A tecla da apóstrofe (') geralmente está localizada no canto superior esquerdo do teclado, acima da tecla Tab. Se você não tem a tecla apóstrofe, pode usar aspas normais.)"
+
+- Class: cmd_question
+  Output: "Acesse a documentação para ':' agora."
+  CorrectAnswer: ?`:`
+  AnswerTests: any_of_exprs('?`:`', "?':'", '?":"')
+  Hint: "Para ver a documentação de um símbolo como o operador dois pontos, você tem que usar crases (`), apóstrofes (') ou aspas (\")). Isto para que o R saiba que você não está tentando usar o comando que símbolo representa. É assim que parece: ?`:`. Não esqueça do ponto de interrogação na frente."
+
+- Class: text
+  Output: "Frequentemente, nós queremos ter mais controle sobre a sequência que estamos criando do que o operador ':' nos dá. A função seq() serve a esse propósito."
+
+- Class: cmd_question
+  Output: "O uso mais básico de seq() faz exatamente a mesma coisa que o operador ':'. Tente (1, 20) para ver isto."
+  CorrectAnswer: seq(1, 20)
+  AnswerTests: omnitest(correctExpr='seq(1, 20)')
+  Hint: "Digite seq(1, 20) e aperte Enter. O espaço depois da vírgula não é essencial mas é recomendado porque tende a fazer com que o seu código pareça menos atulhado."
+  
+- Class: cmd_question
+  Output: "Nos dá o mesmo resultado que 1:20. Contudo, vamos dizer que ao invés disso nós quiséssemos um vetor de números de 0 a 10, com incremento de 0.5. seq(0, 10, by=0.5) faz exatamente isso. Experimente."
+  CorrectAnswer: seq(0, 10, by=0.5)
+  AnswerTests: omnitest(correctExpr='seq(0, 10, by=0.5)')
+  Hint: "Você ainda está usando a função seq() aqui, mas agora com um argumento extra que diz ao R que você quer que sua sequência aumente em incrementos de 0.5. Tente seq(0, 10, by=0.5)."
+
+- Class: cmd_question
+  Output: "Ou talvez não nos importemos com o incremento e só queiramos uma sequência de 30 números entre 5 e 10. seq(5, 10, length=30) resolve. Tente isso agora e armazene o resultado em uma nova variável chamada my_seq."
+  CorrectAnswer: my_seq <- seq(5, 10, length=30)
+  AnswerTests: omnitest(correctExpr='my_seq <- seq(5, 10, length=30)')
+  Hint: "Você está usando a mesma função aqui, mas mudando seus argumentos para resultados diferentes. Certifique-se de que armazenou o resultado em uma nova variável chamada my_seq, assim: my_seq <- seq(5, 10, length=30)."
+
+- Class: cmd_question
+  Output: "Para confirmar que a my_seq tem o comprimento de 30, podemos usar a função length(). Tente agora."
+  CorrectAnswer: length(my_seq)
+  AnswerTests: omnitest(correctExpr='length(my_seq)')
+  Hint: "Use length(my_seq) para ver o comprimento da variável my_seq."
+
+- Class: text
+  Output: "Vamos fingir que não sabemos o comprimento de my_seq, mas que queremos gerar uma sequência de inteiros de 1 a N, onde N representa o comprimento do vetor my_seq. Em outras palavras, queremos um novo vetor (1, 2, 3, ...) que tenha a mesma extensão de my_seq."
+
+- Class: cmd_question
+  Output: "Há diversas maneiras para fazer isso. Uma possibilidade é combinar o operador ':' e a função length() assim:  1:length(my_seq). Tente."
+  CorrectAnswer: 1:length(my_seq)
+  AnswerTests: omnitest(correctExpr='1:length(my_seq)')
+  Hint: "Tente 1:length(my_seq), sem atribuir o resultado a uma nova variável."
+
+- Class: cmd_question
+  Output: "Outra opção é usar seq(along.with = my_seq). Experimente."
+  CorrectAnswer: seq(along.with = my_seq)
+  AnswerTests: omnitest(correctExpr='seq(along.with = my_seq)')
+  Hint: "Digite seq(along.with = my_seq). Note que estamos usando a mesma função seq(), mas com um diferente argumento chamado `along.with`. Isso diz ao R que você quer uma sequência em paralelo com a sequência my_seq. Lembre que você pode digitar ?seq se você tiver dúvidas sobre a função seq()."
+
+- Class: cmd_question
+  Output: "No entanto, como acontece em muitas tarefas comuns, R tem uma função nativa para este propósito chamada seq_along(). Digite seq_along(my_seq) para ve-la em ação  in action."
+  CorrectAnswer: seq_along(my_seq)
+  AnswerTests: omnitest(correctExpr='seq_along(my_seq)')
+  Hint: "A função seq_along() é uma variação da função seq(). Tente seq_along(my_seq) para obter o mesmo resultado de outra maneira."
+
+- Class: text
+  Output: "Frequentemente há várias abordagens para resolver o mesmo problema, especialmente no R. Abordagens simples involvem menos digitação e geralmente são melhores. Também é importante que o código seja legível, para que outros possam entender o que está acontecendo sem grandes problemas."
+  
+- Class: text
+  Output: "Se o R tem uma função nativa para uma determinada tarefa, é provável que a função seja altamente otimizada para este propósito e seja sua melhor opção. A medida que você se tornar um programador mais avançado em R, você poderá criar as suas próprias funções para realizar tarefas quando não houver opções melhores. Nós exploraremos como escrever as suas próprias funções em futuras lições."
+  
+- Class: text
+  Output: "Outra função relacionada com a criação de sequências numéricas é rep(), que é abreviação de 'replicate'. Vamos ver alguns usos."
+  
+- Class: cmd_question
+  Output: "Se estivermos interessados em um vetor que contenha 40 zeros, nós podemos usar rep(0, times=40). Experimente."
+  CorrectAnswer: rep(0, times = 40)
+  AnswerTests: omnitest(correctExpr='rep(0, times = 40)')
+  Hint: "Digite rep(0, times = 40) para criar um vetor contendo 40 zeros."
+
+- Class: cmd_question
+  Output: "Se ao invés disso quisermos um vetor contendo 10 repetições do vetor (0, 1, 2), podemos fazer rep(c(0, 1, 2), times = 10). Vá em frente."
+  CorrectAnswer: rep(c(0, 1, 2), times = 10)
+  AnswerTests: omnitest(correctExpr='rep(c(0, 1, 2), times = 10)')
+  Hint: "Tente rep(c(0, 1, 2), times = 10) para uma variação sobre o mesmo tema. Certifique-se de usar a função c() para dizer ao R que os números 0, 1, e 2 formam um vetor."
+
+- Class: cmd_question
+  Output: "Finalmente, vamos que dizer que ao invés de repetir o vetor (0, 1, 2) reiteradas vezes, nós um vetor que contenha 10 zeros, depois 10 números 1, depois 10 números 2. Podemos fazer isto com o argumento 'each'twos. We can do this with the `each` argument. Tente rep(c(0, 1, 2), each = 10)."
+  CorrectAnswer: rep(c(0, 1, 2), each = 10)
+  AnswerTests: omnitest(correctExpr='rep(c(0, 1, 2), each = 10)')
+  Hint: "Digite rep(c(0, 1, 2), each = 10) para ver como o argumento `each` (cada) na função rep() altera levemente sua conduta."
+
+- Class: mult_question
+  Output: "Você gostaria de informar alguém de que esta lição foi completada com sucesso?"
+  CorrectAnswer: NULL
+  AnswerChoices: Sim; Não
+  AnswerTests: notify()
+  Hint: NULL
+  
