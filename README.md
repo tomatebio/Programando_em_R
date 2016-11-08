@@ -34,6 +34,7 @@ Para testar a versão em português:
 * inicie o R (ou RStudio);
 * install.packages("swirl") # caso você ainda não tenha
 * library(swirl)
+* uninstall_course('Programando_em_R.swc') # caso você tenha uma versão anterior
 * install_course()
 * escolha 'Programando_em_R.swc' no diretório em que você o salvou.
 * swirl()
