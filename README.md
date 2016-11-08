@@ -8,10 +8,10 @@ Primeira versão em português para uso em curso introdutório de programação 
 
 #### Lições originais - versões - (tradutores) - data da tradução
 
-* Basic_Building_Blocks - Blocos Básicos (traduzido por Ariel Levy)
+* Basic_Building_Blocks - Blocos Básicos (traduzido por Ariel Levy - Rev. Rog B Alves)
 * Workspace_and_Files - Espaço de Trabalho e Arquivos (trad. por Rog B Alves) - 02nov2016
 * Sequences_of_Numbers - Sequências Numéricas (trad. por Rog B Alves) - 03nov2016
-* Vectors - Vetores
+* Vectors - Vetores - Vetores (trad. Ariel Levy - Rev. Rog B Alves) - 07nov2016
 * Missing_Values
 * Subsetting_Vectors
 * Matrices_and_Data_Frames
