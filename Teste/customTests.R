@@ -53,6 +53,6 @@ submit_log <- function(){
     #browseURL(paste0(pre_fill_link, encoded_log))
 
     answer<- answer %>%
-        gs_add_row(input=temp)
+        gs_add_row(input=log_tbl)
     
 }
