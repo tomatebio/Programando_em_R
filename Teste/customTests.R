@@ -30,7 +30,7 @@ submit_log <- function(){
   library(googlesheets)
   suppressMessages(library(dplyr))
   # Please edit the link below
-  answer<-gs_key("1bkrQ8_-2kbR4-Hrk5t0nWOeX1tzC6Nayxkmk_jfVL0Q")
+  answer<-gs_key("1bkrQ8_-2kbR4-Hrk5t0nWOeX1tzC6Nayxkmk_jfVL0Q",lookup = FALSE, visibility = "private")
   
   # Do not edit the code below
   
