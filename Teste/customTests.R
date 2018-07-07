@@ -30,7 +30,7 @@ submit_log <- function(){
   library(googlesheets)
   suppressMessages(library(dplyr))
   # Please edit the link below
-  answer<-gs_key("1bkrQ8_-2kbR4-Hrk5t0nWOeX1tzC6Nayxkmk_jfVL0Q",lookup = FALSE)
+  answer<-gs_key("1bkrQ8_-2kbR4-Hrk5t0nWOeX1tzC6Nayxkmk_jfVL0Q")
   
   # Do not edit the code below
   
@@ -53,7 +53,7 @@ submit_log <- function(){
     #browseURL(paste0(pre_fill_link, encoded_log))
 
     answer<- answer %>%
-        gs_add_row(input="aaa")
+        gs_add_row(input=encoded_log)
                                         #gs_add_row(input=encoded_log)
     
 }
