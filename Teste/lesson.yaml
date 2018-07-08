@@ -16,9 +16,9 @@
   Hint: Apenas digite 2 + 2.
 
 - Class: mult_question
-  Output: Você gostaria de enviar o log dessa sessão para avaliação?
+  Output: Você gostaria de enviar o log dessa sessão para avaliação? Caso contrário digite CRTL + C.
 
-  AnswerChoices: Sim, Não
-  CorrectAnswer: NULL
+  AnswerChoices: Sim
+  CorrectAnswer: 1
   AnswerTests: submit_log()
   Hint: hint
