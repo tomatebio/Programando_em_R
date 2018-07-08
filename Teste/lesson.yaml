@@ -18,7 +18,9 @@
 - Class: mult_question
   Output: Você gostaria de enviar o log dessa sessão para avaliação? Caso contrário digite CRTL + C.
 
-  AnswerChoices: Sim
-  CorrectAnswer: 1
-  AnswerTests: submit_log()
+  AnswerChoices: Sim;Não
+  CorrectAnswer: Sim
+  AnswerTests: omnitest(correctVal='Sim'); submit_log() 
   Hint: hint
+
+
