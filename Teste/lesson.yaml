@@ -19,7 +19,7 @@
   Output: Você gostaria de enviar o log dessa sessão para avaliação? Caso contrário digite CRTL + C.
 
   AnswerChoices: Sim;Não
-  CorrectAnswer: NULL
+  CorrectAnswer: Sim
   AnswerTests: submit_log(); bye() 
   Hint: hint
 
