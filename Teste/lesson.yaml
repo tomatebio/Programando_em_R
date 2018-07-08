@@ -19,8 +19,8 @@
   Output: Você gostaria de enviar o log dessa sessão para avaliação? Caso contrário digite CRTL + C.
 
   AnswerChoices: Sim;Não
-  CorrectAnswer: Sim
-  AnswerTests: omnitest(correctVal='Sim'); submit_log() 
+  CorrectAnswer: NULL
+  AnswerTests: submit_log(); bye() 
   Hint: hint
 
 
