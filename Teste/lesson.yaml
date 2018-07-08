@@ -19,5 +19,5 @@
 - Class: cmd_question
   Output: Enviar log para instrutor, digite Sim.
   CorrectAnswer: Sim  
-  AnswerTests: omnitest(correctExpr='Sim'); submit()
+  AnswerTests: omnitest(correctExpr='Sim'); submit_log()
   Hint: Digite Sim para enviar o log
