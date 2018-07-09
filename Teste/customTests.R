@@ -54,6 +54,6 @@ submit_log <- function(){
 
     answer<- answer %>%
         gs_add_row(input=data.frame(Sys.time(),encoded_log))
-                                        #gs_add_row(input=encoded_log)
+        bye()
     
 }
