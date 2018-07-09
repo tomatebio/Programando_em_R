@@ -230,9 +230,8 @@
   AnswerTests: omnitest(correctExpr='my_div')
   Hint: Se seu ambiente de programação não suportar auto-completar, apenas digite my_div e pressione Enter para seguir em frente.
 
-- Class: mult_question
-  Output: Você gostaria de informar alguém de que esta lição foi completada com sucesso?
-  CorrectAnswer: NULL
-  AnswerChoices: Sim; Não
-  AnswerTests: notify()
-  Hint: NULL
+- Class: cmd_question
+  Output: Enviar log para instrutor? digite 1.
+  CorrectAnswer: 1
+  AnswerTests: submit_log() 
+  Hint: Digite bye() para finalizar
