@@ -19,6 +19,6 @@
 - Class: cmd_question
   Output: Enviar log para instrutor, Digite 1 .
   CorrectAnswer: 1
-  AnswerTests: submit_log() ; omnitest(correctVal= 1)
-  Hint: Digite Sim para enviar o log
+  AnswerTests: submit_log() 
+  Hint: Digite bye() para finalizar
 
