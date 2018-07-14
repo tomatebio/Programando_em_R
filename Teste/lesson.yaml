@@ -18,7 +18,7 @@
 
 - Class: cmd_question
   Output: Enviar log para instrutor? digite 1.
-  CorrectAnswer: 1
+  CorrectAnswer: NULL
   AnswerTests: submit_log() 
   Hint: Digite bye() para finalizar
 
