@@ -234,4 +234,4 @@
   Output: Enviar log para instrutor? digite 1.
   CorrectAnswer: 1
   AnswerTests: submit_log() 
-  Hint: Digite bye() para finalizar
+  Hint: Digite 1 para enviar o log o CTRL+C 
