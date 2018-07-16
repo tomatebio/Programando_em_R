@@ -16,9 +16,12 @@
   Hint: Apenas digite 2 + 2.
 
 
-- Class: cmd_question
-  Output: Enviar log para instrutor? digite 1.
-  CorrectAnswer: 1
-  AnswerTests: omnitest(correctExpr='2 + 2')
-  Hint: 
+
+  
+- Class: mult_question
+  Output: "Would you like to receive credit for completing this course on Coursera.org?"
+  CorrectAnswer: NULL
+  AnswerChoices: Yes;No
+  AnswerTests: submit_log()
+
 
