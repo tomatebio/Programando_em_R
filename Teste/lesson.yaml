@@ -19,9 +19,9 @@
 
   
 - Class: mult_question
-  Output: "Would you like to receive credit for completing this course on Coursera.org?"
+  Output: "Você deseja enviar o log"
   CorrectAnswer: Yes
   AnswerChoices: Yes;No
-  AnswerTests: submit_log() ; bye()
+  AnswerTests: omnitest(correctExpr='Yes')
 
 
