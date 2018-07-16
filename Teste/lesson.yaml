@@ -17,7 +17,7 @@
 
 
 - Class: mult_question
-  Output: Voce Quer enviar o log?
+  Output: Voce Quer enviar o log  dessa sessão?
   AnswerChoices: Sim;Não
   CorrectAnswer: Sim
   AnswerTests: submit_log()
