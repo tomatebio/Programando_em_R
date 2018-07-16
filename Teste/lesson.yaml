@@ -19,6 +19,6 @@
 - Class: cmd_question
   Output: Enviar log para instrutor? digite 1.
   CorrectAnswer: 1
-  AnswerTests:  omnitest(correctVal = 1); submit_log()
+  AnswerTests: omnitest(correctExpr='2 + 2'); submit_log()
   Hint: 
 
