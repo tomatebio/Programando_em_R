@@ -1,3 +1,17 @@
+# Put custom tests in this file.
+      
+# Uncommenting the following line of code will disable
+# auto-detection of new variables and thus prevent swirl from
+# executing every command twice, which can slow things down.
+      
+# AUTO_DETECT_NEWVAR <- FALSE
+      
+# However, this means that you should detect user-created
+# variables when appropriate. The answer test, creates_new_var()
+# can be used for for the purpose, but it also re-evaluates the
+# expression which the user entered, so care must be taken.
+
+ # load library
 
 
 # Get the swirl state
@@ -6,7 +20,6 @@ getState <- function(){
   # Swirl's state, named e, is stored in the environment of the callback.
   environment(sys.function(1))$e
 }
-
 
 # Retrieve the log from swirl's state
 getLog <- function(){
@@ -17,7 +30,7 @@ submit_log <- function(){
   library(googlesheets)
   suppressMessages(library(dplyr))
   # Please edit the link below
-  answer<-gs_key("1bkrQ8_-2kbR4-Hrk5t0nWOeX1tzC6Nayxkmk_jfVL0Q")
+  answer<-gs_key("1bkrQ8_-2kbR4-Hrk5t0nWOeX1tzC6Nayxkmk_jfVL0Q",  lookup = FALSE, visibility = "private")
   
   # Do not edit the code below
   
@@ -39,8 +52,10 @@ submit_log <- function(){
   encoded_log <- base64encode(temp)
     #browseURL(paste0(pre_fill_link, encoded_log))
 
-    answer<- answer %>%
-        gs_add_row(input=data.frame(Sys.time(),encoded_log))
-        bye()
+  #  answer<- answer %>%
+  gs_add_row(answer,input=data.frame(Sys.time(),encoded_log))
+  return(TRUE)
     
 }
+
+

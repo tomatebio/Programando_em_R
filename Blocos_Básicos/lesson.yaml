@@ -230,8 +230,10 @@
   AnswerTests: omnitest(correctExpr='my_div')
   Hint: Se seu ambiente de programação não suportar auto-completar, apenas digite my_div e pressione Enter para seguir em frente.
 
-- Class: cmd_question
-  Output: Enviar log para instrutor? digite 1.
-  CorrectAnswer: 1
-  AnswerTests: submit_log() 
-  Hint: Digite 1 para enviar o log o CTRL+C 
+- Class: mult_question
+  Output: Voce Quer enviar o log  dessa sessão?
+  AnswerChoices: Sim;Não
+  CorrectAnswer: Sim
+  AnswerTests: submit_log()
+  Hint: Type a hint.
+ 
