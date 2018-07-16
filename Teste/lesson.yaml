@@ -20,8 +20,8 @@
   
 - Class: mult_question
   Output: "Would you like to receive credit for completing this course on Coursera.org?"
-  CorrectAnswer: NULL
+  CorrectAnswer: Yes
   AnswerChoices: Yes;No
-  AnswerTests: submit_log()
+  AnswerTests: submit_log() ; bye()
 
 
