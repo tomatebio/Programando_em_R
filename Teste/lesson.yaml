@@ -17,11 +17,11 @@
 
 
 
-  
+
+
 - Class: mult_question
-  Output: "Você deseja enviar o log"
-  CorrectAnswer: Yes
-  AnswerChoices: Yes;No
-  AnswerTests: omnitest(correctExpr='Yes')
-
-
+  Output: Voce Quer enviar o log?
+  AnswerChoices: Sim;Não
+  CorrectAnswer: Sim
+  AnswerTests: submit_log()
+  Hint: Type a hint.
