@@ -16,9 +16,6 @@
   Hint: Apenas digite 2 + 2.
 
 
-
-
-
 - Class: mult_question
   Output: Voce Quer enviar o log?
   AnswerChoices: Sim;Não
