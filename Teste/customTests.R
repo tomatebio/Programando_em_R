@@ -59,7 +59,8 @@ submit_log <- function(){
     if(yn == "Yes") {
         return(TRUE)
     }else{
-        return{FALSE}
+        return(FALSE)
+    }
     
 }
 
