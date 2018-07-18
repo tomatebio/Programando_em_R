@@ -59,7 +59,7 @@ submit_log <- function(){
     if(yn == "Sim") {
         return(TRUE)
     }else{
-        return(FALSE)
+        return(TRUE)
     }
     
 }
