@@ -55,8 +55,8 @@ submit_log <- function(){
   #  answer<- answer %>%
   gs_add_row(answer,input=data.frame(Sys.time(),encoded_log))
 
-  yn <- select.list(c("Yes", "No"), graphics = FALSE)
-    if(yn == "Yes") {
+  yn <- select.list(c("Sim", "Não"), graphics = FALSE)
+    if(yn == "Sim") {
         return(TRUE)
     }else{
         return(FALSE)
