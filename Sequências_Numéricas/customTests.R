@@ -4,7 +4,7 @@
 # auto-detection of new variables and thus prevent swirl from
 # executing every command twice, which can slow things down.
       
-# AUTO_DETECT_NEWVAR <- FALSE
+#AUTO_DETECT_NEWVAR <- FALSE
       
 # However, this means that you should detect user-created
 # variables when appropriate. The answer test, creates_new_var()
@@ -26,7 +26,15 @@ getLog <- function(){
   getState()$log
 }
 
+
+
 submit_log <- function(){
+     yn <- select.list(c("Sim","Não"), graphics=FALSE)
+     if(yn=="Não") {
+        cat("Não será enviado")
+        return(TRUE)  }
+
+  cat("Preparando o envio ...\n")
   library(googlesheets)
   suppressMessages(library(dplyr))
   # Please edit the link below
@@ -54,7 +62,7 @@ submit_log <- function(){
 
   #  answer<- answer %>%
   gs_add_row(answer,input=data.frame(Sys.time(),encoded_log))
-  return(TRUE)
+   return(TRUE)
     
 }
 
