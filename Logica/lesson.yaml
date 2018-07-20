@@ -223,12 +223,7 @@ Vamos tomar um momento para revisar. O operador igual "==" testa is dois valores
   
 - Class : text
   Output: "5 == 6 
-
-evaluates to FALSE, !FALSE evaluates to TRUE, so xor(FALSE, TRUE)
-    evaluates to TRUE. On the other hand if the first argument was changed to 5 == 5
-    and the second argument was unchanged then both arguments would have been TRUE, 
-    so xor(TRUE, TRUE) would have evaluated to FALSE."
-    
+   
 - Class: mult_question
   Output:  Qual das seguintes expressões avalia como FALSE?
   CorrectAnswer: "xor(4 >= 9, 8 != 8.0)"
@@ -237,8 +232,7 @@ evaluates to FALSE, !FALSE evaluates to TRUE, so xor(FALSE, TRUE)
   Hint: "Para xor() seja avaliado como TRUE, um argumento deve ser TRUE e o outro deve ser FALSE."
     
 - Class : cmd_question
-  Output: "Para a próximas questões, vamos criar um vetor de inteiros chamado ints. Crie um vetor digitando:
- ints <- sample(10)"
+  Output: "Para a próximas questões, vamos criar um vetor de inteiros chamado ints. Crie um vetor digitando: ints <- sample(10)"
   CorrectAnswer: "ints <- sample(10)"
   AnswerTests: omnitest(correctExpr='ints <- sample(10)')
   Hint: "Para criar um vetor de 10 inteiros  sem repetição digite: ints <- sample(10)"
