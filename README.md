@@ -17,11 +17,11 @@ O envio é feito usando o pacote googlesheets. É necessário obter o número gs
 * Missing_Values
 * Subsetting_Vectors
 * Matrices_and_Data_Frames
-* Logic_ Lógica (trad. Carlos Tonhatti) 18julho2018 
+* Logic- Lógica (trad. Carlos Tonhatti) 18julho2018 
 * Functions
 * lapply_and_sapply
 * vapply_and_tapply
-* Looking_at_Data
+* Looking_at_Data- Olhando os dados (trad. Carlos Tonhatti) 18jul2018
 * Simulation
 * Dates_and_Times
 * Base_Graphics
