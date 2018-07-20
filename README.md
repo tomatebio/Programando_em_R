@@ -29,7 +29,7 @@ O envio é feito usando o pacote googlesheets. É necessário obter o número gs
 
 
 #### Versão para teste:
-
+```{r}
 Para testar a versão em português:
 # instalar o pacote swirl e outros pacotes necessários.
 install.packages("swirl")
@@ -40,5 +40,4 @@ install.packages("httr")
 # instalar o curso diretamente do gitHub
 library(swirl)
 install_course_github("tomatebio","Programando_em_R")
-
-
+```
