@@ -23,7 +23,7 @@ O envio é feito usando o pacote googlesheets. É necessário obter o número gs
 * vapply_and_tapply
 * Looking_at_Data- Olhando os dados (trad. Carlos Tonhatti) 18jul2018
 * Simulation
-* Dates_and_Times
+* Dates_and_Times- Data e Horários (trad. Carlos Tonhatti) 26julho2018  
 * Base_Graphics
 
 
