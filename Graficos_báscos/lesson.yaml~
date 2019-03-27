@@ -7,40 +7,46 @@
   Version: 0.1.1
 
 - Class: text
-  Output: One of the greatest strengths of R, relative to other programming languages, is the ease with which we can create publication-quality graphics. In this lesson, you'll learn about base graphics in R. 
+  Output: Um dos pontos positivos do R, relativo às outras linguagens, é a facilidade de criacao de gráficos com qualidade de publicaćao. Nessa licao, você vai aprender sobre os graficos básicos no R.
+
+
 
 - Class: text
-  Output: We do not cover the more advanced portions of graphics in R in this lesson. These include lattice, ggplot2 and ggvis.
+  Output: Não falaremos sobre gráficos avanćados no R durante esta licao. Que são os gráficos feitos pelos pacotes lattice, ggplot2 e ggvis 
 
 - Class: text
-  Output: There is a school of thought that this approach is backwards, that we should teach ggplot2 first. See http://varianceexplained.org/r/teach_ggplot2_to_beginners/ for an outline of this view.
+  Output: Há pessoas que acreditam que este método seja ultrapassado, que nós deveriamos ensinar ggplot2 primeiro. Veja  http://varianceexplained.org/r/teach_ggplot2_to_beginners/ se quiser ver os argumentos.
+
 
 - Class: cmd_question
-  Output: Load the included data frame cars with data(cars).
+  Output:  Carregue  os dados cars  digitando (cars).
   CorrectAnswer: data(cars)
   AnswerTests: omnitest(correctExpr='data(cars)')
-  Hint: Type data(cars) to load the data.
+  Hint: Digite  data(cars) para carregar os dados.
 
 - Class: text
-  Output: To fix ideas, we will work with simple data frames. Our main goal is to introduce various plotting functions and their arguments. All the output would look more interesting with larger, more complex data sets.
+  Output: Para enfatizar os conceitos, nós iremos trabalhar com dados simples. Nosso objetivo é apresentar várias funćoes gráficas e seus argumentos. Os resultados seriam mais interessantes com conjuntos de dados maiores e mais complexos.
+
 
 - Class: cmd_question
-  Output: Pull up the help page for cars.
+  Output:  Abra a página de ajuda dos dados cars.
   CorrectAnswer: ?cars
   AnswerTests: any_of_exprs('?cars', 'help(cars)', 'help("plot")')
-  Hint: Type ?cars or help(cars) to view a help page with details on the car data frame.
+  Hint: Digite  ?cars ou help(cars)  para ver a página de ajuda com os detalhes sobre o data frame.
 
 - Class: text
-  Output: "As you can see in the help page, the cars data set has only two variables: speed and stopping distance. Note that the data is from the 1920s."
+  Output: " Como você pode ver na página de ajuda, cars tem apenas duas variaveis: speed e stopping distance. Perceba que os dados são de 1920."
 
 - Class: cmd_question
-  Output: Run head() on the cars data.
+  Output:  Rode head() sobre os dados cars.
   CorrectAnswer: head(cars)
   AnswerTests: omnitest(correctExpr='head(cars)')
-  Hint: Type head(cars) to see the top of the cars data frame.
+  Hint: Digite  head(cars)  para ver os primeiros registros do data frame.
 
 - Class: text
-  Output: Before plotting, it is always a good idea to get a sense of the data. Key R commands for doing so include, dim(), names(), head(), tail() and summary().
+  Output: Antes de desenhar os gráficos, é sempre uma boa ideia ter alguma noćão dos dados. Os comandos chaves para isso incluem  dim(), names(), head(), tail() and summary().
+
+
 
 - Class: cmd_question
   Output: Run the plot() command on the cars data frame. 
