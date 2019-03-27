@@ -1,21 +1,22 @@
 - Class: meta
   Course: Programando em R
-  Lesson: Graficos Básicos 
+  Lesson: Gráficos Básicos 
   Author: David Kane
+  Tranlate: Carlos Tonhatti
   Type: Standard
   Organization: Williams College
   Version: 0.1.1
 
 - Class: text
-  Output: Um dos pontos positivos do R, relativo às outras linguagens, é a facilidade de criacao de gráficos com qualidade de publicaćao. Nessa licao, você vai aprender sobre os graficos básicos no R.
+  Output: Um dos pontos positivos do R, relativo às outras linguagens, é a facilidade de criação de gráficos com qualidade de publicação. Nessa lição, você vai aprender sobre os gráficos básicos no R.
 
 
 
 - Class: text
-  Output: Não falaremos sobre gráficos avanćados no R durante esta licao. Que são os gráficos feitos pelos pacotes lattice, ggplot2 e ggvis 
+  Output: Não falaremos sobre gráficos avançados no R durante esta lição. Que são os gráficos feitos pelos pacotes lattice, ggplot2 e ggvis 
 
 - Class: text
-  Output: Há pessoas que acreditam que este método seja ultrapassado, que nós deveriamos ensinar ggplot2 primeiro. Veja  http://varianceexplained.org/r/teach_ggplot2_to_beginners/ se quiser ver os argumentos.
+  Output: Há pessoas que acreditam que este método seja ultrapassado, que nós deveríamos ensinar ggplot2 primeiro. Veja  http://varianceexplained.org/r/teach_ggplot2_to_beginners/ se quiser ver os argumentos.
 
 
 - Class: cmd_question
@@ -25,7 +26,7 @@
   Hint: Digite  data(cars) para carregar os dados.
 
 - Class: text
-  Output: Para enfatizar os conceitos, nós iremos trabalhar com dados simples. Nosso objetivo é apresentar várias funćoes gráficas e seus argumentos. Os resultados seriam mais interessantes com conjuntos de dados maiores e mais complexos.
+  Output: Para enfatizar os conceitos, nós iremos trabalhar com dados simples. Nosso objetivo é apresentar várias funções gráficas e seus argumentos. Os resultados seriam mais interessantes com conjuntos de dados maiores e mais complexos.
 
 
 - Class: cmd_question
@@ -35,7 +36,7 @@
   Hint: Digite  ?cars ou help(cars)  para ver a página de ajuda com os detalhes sobre o data frame.
 
 - Class: text
-  Output: "Como você pode ver na página de ajuda, cars tem apenas duas variaveis: speed e stopping distance. Perceba que os dados são de 1920."
+  Output: "Como você pode ver na página de ajuda, cars tem apenas duas variáveis: speed e stopping distance. Perceba que os dados são de 1920."
 
 - Class: cmd_question
   Output:  Rode head() sobre os dados cars.
@@ -44,7 +45,7 @@
   Hint: Digite  head(cars)  para ver os primeiros registros do data frame.
 
 - Class: text
-  Output: Antes de desenhar os gráficos, é sempre uma boa ideia ter alguma noćão dos dados. Os comandos chaves para isso incluem  dim(), names(), head(), tail() and summary().
+  Output: Antes de desenhar os gráficos, é sempre uma boa ideia ter alguma noção dos dados. Os comandos chaves para isso incluem  dim(), names(), head(), tail() and summary().
 
 
 - Class: cmd_question
@@ -55,27 +56,27 @@
 
 
 - Class: text
-  Output: Como sempre, o R tenta devolver algo que faća sentido  a partir da informaćão que você deu. Primeiro, o R  percebe que o data frame que você deu a ele tem apenas duas colunas, então ele pressume que você quer um gráfico de uma coluna versus a outra.
+  Output: Como sempre, o R tenta devolver algo que faća sentido  a partir da informação que você deu. Primeiro, o R  percebe que o data frame que você deu a ele tem apenas duas colunas, então ele presume que você quer um gráfico de uma coluna versus a outra.
 
 
 - Class: text
-  Output: Segundo, como você não deu nomes para os eixos, o R usa o nome das colunas. Terceiro, são criadas marcas nos eixos nos números arredondados. O R também usa outras općões de fabrica "default" que estão na funćão plot.
+  Output: Segundo, como você não deu nomes para os eixos, o R usa o nome das colunas. Terceiro, são criadas marcas nos eixos nos números arredondados. O R também usa outras opções de fabrica "default" que estão na função plot.
 
 - Class: text
-  Output: Mas atenćao, nem sempre o R é tão experto assim. Ele pode entender errado e o resultado ser completamente diferente do que se espera.
+  Output: Mas atenção, nem sempre o R é tão experto assim. Ele pode entender errado e o resultado ser completamente diferente do que se espera.
 
 - Class: text
-  Output: Nós vamos agora gastar um tempo explorando a funćão plot, mas muito do que vamos falar se aplica a maioria das outras funćoes graficas (básicas) no R.
+  Output: Nós vamos agora gastar um tempo explorando a função plot, mas muito do que vamos falar se aplica a maioria das outras funções gráficas (básicas) no R.
 
 
 - Class: cmd_question
-  Output: Veja a página de ajuda para a funcao  plot(). 
+  Output: Veja a página de ajuda para a função  plot(). 
   CorrectAnswer: ?plot
   AnswerTests: any_of_exprs('?plot', 'help(plot)')
   Hint:  Digite  ?plot or help(plot)  para ver a página de ajuda de  plot().
 
 - Class: text
-  Output: A página de ajuda da funcao plot() evidencia os diferentes argumentos que a funcáo pode ter. Os dois mais importantes são x e o y, as variaveis que serão usadas no gráfico. Nas próximas questões inclua os nomes dos argumentos em tuas respostas. Ou seja, não digite simplesmente plot(cars$speed, cars$dist), pois não irá acertar a questão. Ao inves disso use  plot(x = cars$speed, y = cars$dist).
+  Output: A página de ajuda da função plot() evidencia os diferentes argumentos que a função pode ter. Os dois mais importantes são x e o y, as variáveis que serão usadas no gráfico. Nas próximas questões inclua os nomes dos argumentos em tuas respostas. Ou seja, não digite simplesmente plot(cars$speed, cars$dist), pois não irá acertar a questão. Ao invés disso use  plot(x = cars$speed, y = cars$dist).
 
 - Class: cmd_question
   Output: Use plot() para mostrar speed no eixo x e dist no eixo y  usando o dados do data frame cars. Use a forma do comando plot na qual os vetores são explicitamente passados como argumentos para x e y.
@@ -85,20 +86,20 @@
   Hint: Digite  plot(x = cars$speed, y = cars$dist) para criar o gráfico.
 
 - Class: text
-  Output: Veja que isso produz um gráfico um pouco diferente que plot(cars). Nesse caso, o R está certo que você quer usar os nomes das colunas nos eixos, então ele usa o argumento que você passou, com o nome do data frame e o sinal de dolar.
+  Output: Veja que isso produz um gráfico um pouco diferente que plot(cars). Nesse caso, o R está certo que você quer usar os nomes das colunas nos eixos, então ele usa o argumento que você passou, com o nome do data frame e o sinal de dólar.
 
 
 - Class: text
   Output: Veja que há outros meios de usar o comando plot. Por exemplo, nós podemos ter um gráfico similar ao anterior com plot(dist ~ speed, cars). Entretanto, nós iremos falar mais sobre usar a interface de formulas mais tarde.
  
 - Class: cmd_question
-  Output: Use plot() para ver dist no eixo x e spped no eixo y. Isso é o oposto que fizemos no último gráfico.
+  Output: Use plot() para ver dist no eixo x e speed no eixo y. Isso é o oposto que fizemos no último gráfico.
   CorrectAnswer: plot(x = cars$dist, y = cars$speed)
   AnswerTests: omnitest(correctExpr='plot(x = cars$dist, y = cars$speed)')
   Hint: Digite  plot(x = cars$dist, y = cars$speed) para criar o gráfico.
 
 - Class: text
-  Output: Provavelmente tem mais sentido speed ir no eixo x  pois a distancia de parada é uma funcao da velocidade. Então, para o resto das questões dessa lićao, sempre coloque speed no eixo x.
+  Output: Provavelmente tem mais sentido speed ir no eixo x  pois a distancia de parada é uma função da velocidade. Então, para o resto das questões dessa lição, sempre coloque speed no eixo x.
   
 - Class: text
   Output:  De fato, você pode manter a reposta para as próximas questões na forma plot(x = cars$speed, y = cars$dist, ...) mas com vários outros argumentos usados no lugar de ... .
@@ -122,7 +123,7 @@
   Hint: Digite plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance") para criar o gráfico.
 
 - Class: text
-  Output:  O motivo que plot(cars) funcionou no comeco dessa licao foi que o R é experto suficiente para saber que o primeiro elemento (i.e. a primeira coluna) em cars deve ser  o argumento x e a segunda ao elemento y. As próximas respostas serão todas no formato plot(cars,...) com vários argumentos adicionados.
+  Output:  O motivo que plot(cars) funcionou no começo dessa lição foi que o R é experto suficiente para saber que o primeiro elemento (i.e. a primeira coluna) em cars deve ser  o argumento x e a segunda ao elemento y. As próximas respostas serão todas no formato plot(cars,...) com vários argumentos adicionados.
 
 
 - Class: text
@@ -130,7 +131,7 @@
 
 
 - Class: cmd_question
-  Output: Faća o grafico com o título principal "My Plot". Atenćao que o argumento para título é "main" e não "title".
+  Output: Faća o gráfico com o título principal "My Plot". Atenção que o argumento para título é "main" e não "title".
   CorrectAnswer: plot(cars, main = "My Plot")
   AnswerTests: omnitest(correctExpr='plot(cars, main = "My Plot")')
   Hint: Digite plot(cars, main = "My Plot") para criar o gráfico.
@@ -142,7 +143,7 @@
   Hint: Digite plot(cars, sub = "My Plot Subtitle")  para criar o gráfico.
 
 - Class: text
-  Output: A página de ajuda (?plot) cobre apenas um pequeno número dos muitos argumentos que podem ser utilizados com o plot() e outras funćoes gráficas. Para comećar a explorar outras opcoes, veja  ?par. Vamos ver alguns dos argumentos mais comunmente usados. Continue usando plot(cars, ...)  como resposta base para estas questões.
+  Output: A página de ajuda (?plot) cobre apenas um pequeno número dos muitos argumentos que podem ser utilizados com o plot() e outras funćoes gráficas. Para começar a explorar outras opções, veja  ?par. Vamos ver alguns dos argumentos mais comumente usados. Continue usando plot(cars, ...)  como resposta base para estas questões.
 
 - Class: cmd_question
   Output: Faća o gráfico de cars colorindo os pontos em vermelho. (Use col = 2)
@@ -157,24 +158,24 @@
   Hint: Digite plot(cars, xlim = c(10, 15)) para criar este gráfico.
 
 - Class: text
-  Output: Você também pode alterar o formato dos simbolos no gráfico. A página de ajuda para points (?points) tem mais detalhes.
+  Output: Você também pode alterar o formato dos símbolos no gráfico. A página de ajuda para points (?points) tem mais detalhes.
 
 
 - Class: cmd_question
-  Output: Faća o gráfico cars  usando triangulos.  (Use pch = 2.) 
+  Output: Faća o gráfico cars  usando triângulos.  (Use pch = 2.) 
   CorrectAnswer: plot(cars, pch = 2)
   AnswerTests: omnitest(correctExpr='plot(cars, pch = 2)')
   Hint: Digite plot(cars, pch = 2) para criar o gráfico.
 
 - Class: text
-  Output: Argumentos como "col" e "pch" podem não parecer muito intuitivo. E realmente eles não são. Muitas pessoas usam pacotes mais modernos como ggplot2 para criar os graficos em R. 
+  Output: Argumentos como "col" e "pch" podem não parecer muito intuitivo. E realmente eles não são. Muitas pessoas usam pacotes mais modernos como ggplot2 para criar os gráficos em R. 
 
 
 - Class: text
-  Output: Entretanto, uma introdućao aos  gráficos baśicos  é muito útil pois muito do mesmo  "vocabulário" é usado no lattice e ggplot2 
+  Output: Entretanto, uma introdução aos  gráficos básicos  é muito útil pois muito do mesmo  "vocabulário" é usado no lattice e ggplot2 
 
 - Class: text
-  Output: Vamos agora olhar algumas outras funcaos gráficas básicas  que podem ser muito úteis, comećando por boxplots.
+  Output: Vamos agora olhar algumas outras funções gráficas básicas  que podem ser muito úteis, começando por boxplots.
 
 - Class: cmd_question
   Output: Carregue os dados mtcars. 
@@ -183,7 +184,7 @@
   Hint: Digite data(mtcars) para carregar os dados.
 
 - Class: text
-  Output: Quando você carregar um novo data frame, você deve explora-lo antes de usa-lo. No meio de uma licao swirl, apenas digite play(). Isso temporariamente suspende (a licao sem perder o  teu trabalho até aquele ponto) e permite que você use outros comandos como dim(cars) e head(cars). Uma vez que você tenha examinado os dados, apenas digite nxt() e a licao vai voltar no ponto que voce parou.
+  Output: Quando você carregar um novo data frame, você deve explorá-lo antes de usá-lo. No meio de uma lição swirl, apenas digite play(). Isso temporariamente suspende (a lição sem perder o  teu trabalho até aquele ponto) e permite que você use outros comandos como dim(cars) e head(cars). Uma vez que você tenha examinado os dados, apenas digite nxt() e a lição vai voltar no ponto que você parou.
 
 - Class: cmd_question
   Output:  Veja a página de ajuda de boxplot(). 
@@ -192,10 +193,10 @@
   Hint: Digite  ?boxplot ou help(boxplot) para ver a página de ajuda com os detalhes sobre boxplot.
 
 - Class: text
-  Output: Ao inves de adicionar as colunas de dado diretamente como argumentos, como fizemos com  o plot(), é frequentemente mais simples passar o data frame inteiro. É isso que o argumento "data" permite
+  Output: Ao invés de adicionar as colunas de dado diretamente como argumentos, como fizemos com  o plot(), é frequentemente mais simples passar o data frame inteiro. É isso que o argumento "data" permite
 
 - Class: text
-  Output: boxplot(),  como outras funcoes no R, também recebe argumentos do tipo "formula", geralmente uma expressao com um til (~) a qual indica a relacao entre as variaveis de entrada. Isso permite que você entre algo como mpg ~ cyl para fazer um gráfico relacionando cyl (número de cilindros) no eixo x e mpg (milhas por galão) no eixo y.
+  Output: boxplot(),  como outras funcoes no R, também recebe argumentos do tipo "formula", geralmente uma expressão com um til (~) a qual indica a relação entre as variáveis de entrada. Isso permite que você entre algo como mpg ~ cyl para fazer um gráfico relacionando cyl (número de cilindros) no eixo x e mpg (milhas por galão) no eixo y.
 
 - Class: cmd_question
   Output: Use boxplot() com  a  formula = mpg ~ cyl e  data = mtcars para criar um boxplot.
@@ -209,7 +210,7 @@
 
 
 - Class: text
-  Output: Quando olhamos um única variavel, histogramas são ferramentas bem úteis. A funcao hist() faz histogramas no R. Assim como plot() a funcao hist() é melhor usado quando passamos apenas um único vetor.
+  Output: Quando olhamos um única variável, histogramas são ferramentas bem úteis. A função hist() faz histogramas no R. Assim como plot() a função hist() é melhor usado quando passamos apenas um único vetor.
 
 - Class: cmd_question
   Output: Use hist() com o vetor mtcars$mpg  para criar um histograma.
@@ -222,11 +223,11 @@
 # Other functions that I use include identify().
 
 - Class: text
-  Output: Nessa licao, voce aprendeu como trabalhar com gráficos básicos no R. O melhor lugar de continuar este estudo é o pacote ggplot2. Se você quer explorar outros elementos dos gráficos básicos, então está página (http://www.ling.upenn.edu/~joseff/rstudy/week4.html)  pode ser útil para você.
+  Output: Nessa lição, você aprendeu como trabalhar com gráficos básicos no R. O melhor lugar de continuar este estudo é o pacote ggplot2. Se você quer explorar outros elementos dos gráficos básicos, então está página (http://www.ling.upenn.edu/~joseff/rstudy/week4.html)  pode ser útil para você.
 
 
 - Class: mult_question
-  Output: Voce Quer enviar o log  dessa sessão?
+  Output: Você quer enviar o log  dessa sessão?
   AnswerChoices: Sim;Não
   CorrectAnswer: Sim
   AnswerTests: submit_log()
