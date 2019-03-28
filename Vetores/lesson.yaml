@@ -218,7 +218,7 @@
           de caracteres "1", "2", "3", e "4".
 
 - Class: mult_question
-  Output: Voce Quer enviar o log  dessa sessão?
+  Output: Voce quer enviar o log  dessa sessão?
   AnswerChoices: Sim;Não
   CorrectAnswer: Sim
   AnswerTests: submit_log()

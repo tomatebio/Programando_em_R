@@ -231,7 +231,7 @@
   Hint: Se seu ambiente de programação não suportar auto-completar, apenas digite my_div e pressione Enter para seguir em frente.
 
 - Class: mult_question
-  Output: Voce Quer enviar o log  dessa sessão?
+  Output: Você quer enviar o log  dessa sessão?
   AnswerChoices: Sim;Não
   CorrectAnswer: Sim
   AnswerTests: submit_log()
