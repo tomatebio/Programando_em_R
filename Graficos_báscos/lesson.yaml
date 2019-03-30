@@ -10,8 +10,6 @@
 - Class: text
   Output: Um dos pontos positivos do R, relativo às outras linguagens, é a facilidade de criação de gráficos com qualidade de publicação. Nessa lição, você vai aprender sobre os gráficos básicos no R.
 
-
-
 - Class: text
   Output: Não falaremos sobre gráficos avançados no R durante esta lição. Que são os gráficos feitos pelos pacotes lattice, ggplot2 e ggvis 
 
@@ -80,8 +78,7 @@
 
 - Class: cmd_question
   Output: Use plot() para mostrar speed no eixo x e dist no eixo y  usando o dados do data frame cars. Use a forma do comando plot na qual os vetores são explicitamente passados como argumentos para x e y.
-
- CorrectAnswer: plot(x = cars$speed, y = cars$dist)
+  CorrectAnswer: plot(x = cars$speed, y = cars$dist)
   AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist)')
   Hint: Digite  plot(x = cars$speed, y = cars$dist) para criar o gráfico.
 
