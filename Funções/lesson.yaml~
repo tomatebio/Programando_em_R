@@ -1,49 +1,43 @@
 - Class: meta
-  Course: R Programming E
+  Course: Programando em R
   Lesson: Functions
   Author: Sean Kross
+  Translation: Carlos Tonhatti
   Type: Standard
   Organization: swirlstats
   Version: 2.2.14
 
 - Class: text
-  Output: Functions are one of the fundamental building blocks of the R language. They are small 
-    pieces of reusable code that can be treated like any other R object.
+  Output: Funcoes são os blocos fundamentais da linguagem R. Eles são pequenas pećas de code reusaveis que podem ser tratados com qualquer outro objeto R.
 
 - Class: text
-  Output: "If you've worked through any other part of this course, you've probably
-    used some functions already. Functions are usually characterized by the name
-    of the function followed by parentheses."
+  Output: "Se voce já fez outras partes desse curso, voce provavelmente já usou funcoes. 
+As funcoes são normalmente caraterizadas pelo nome da funcao seguida por parenteses."
 
 - Class: cmd_question
-  Output: "Let's try using a few basic functions just for fun. The Sys.Date()
-    function returns a string representing today's date. Type Sys.Date() below 
-      and see what happens."
+  Output: "Vamos tentar usar algumas funcoes basicas por diversao. A funcao Sys.Date() retorna uma string representando a data de hoje.
+ Digite Sys.Date() abaixo e veja o que acontece."
   CorrectAnswer: Sys.Date()
   AnswerTests: omnitest(correctExpr='Sys.Date()')
-  Hint: "Display today's date by typing: Sys.Date()"
+  Hint: "Veja a data de hoje digitando: Sys.Date()"
 
 - Class: text
-  Output: "Most functions in R return a value. Functions like Sys.Date() return a
-    value based on your computer's environment, while other functions manipulate 
-    input data in order to compute a return value."
+  Output: "A maioria das funcoes no R retorna um valor. Funcoes como Sys.date() retorna um valor baseado no ambiente do teu computador, 
+enquanto outras funcoes manipulam os dados entrados para computar o valor de retorna." 
 
 - Class: cmd_question
-  Output: "The mean() function takes a vector of numbers as input, and returns
-    the average of all of the numbers in the input vector. Inputs to functions
-    are often called arguments. Providing arguments to a function is also
-    sometimes called passing arguments to that function. Arguments you want to 
-    pass to a function go inside the function's parentheses. Try passing the argument
-    c(2, 4, 5) to the mean() function."
+  Output: "A funcao mean() recebe um vetor de números como entrada e retorna a média de todos os números do vetor de entrada.
+ Entradas para as funcoes sao chamadas argumentos. Providenciar argumentos para uma funcao é também chamado de passar argumentos para essa funcao.
+ Argumentos que voce quer passar para uma funcao vao dentro  dos parenteses. Tente passar o argumento c(2,4,5) para a funcao mean()."
+
   CorrectAnswer: mean(c(2, 4, 5))
   AnswerTests: omnitest(correctExpr='mean(c(2, 4, 5))')
-  Hint: "Compute the average of 2, 4, and 5 by typing: mean(c(2, 4, 5))"
+  Hint: "Compute  a média de  2, 4, e 5  digitando: mean(c(2, 4, 5))"
 
 - Class: text
-  Output: Functions usually take arguments which are variables that the function operates on. For example,
-    the mean() function takes a vector as an argument, like in the case of mean(c(2,6,8)). The mean()
-    function then adds up all of the numbers in the vector and divides that sum by the
-    length of the vector.
+  Output: Funcoes normalmente recebem argumentos os quais sao variaveis as quais as  funcoes [matemáticas].
+  Por exemplo, a funcao mean()recebe um vetor como um argumento, como no caso de mean(c(2,6,8)).
+  A funcao mean() entao soma todos os números do vetor e divide essa soma pelo comprimento do vetor.
 
 - Class: text
   Output: In the following question you will be asked to modify a script that will

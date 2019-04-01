@@ -36,15 +36,10 @@ enquanto outras funcoes manipulam os dados entrados para computar o valor de ret
 
 - Class: text
   Output: Funcoes normalmente recebem argumentos os quais sao variaveis as quais as  funcoes [matemáticas].
-  Por exemplo, a funcao mean()recebe um vetor como um argumento, como no caso de mean(c(2,6,8)).
-  A funcao mean() entao soma todos os números do vetor e divide essa soma pelo comprimento do vetor.
+  Por exemplo, a funcao mean()recebe um vetor como um argumento, como no caso de mean(c(2,6,8)). A funcao mean() entao soma todos os números do vetor e divide essa soma pelo comprimento do vetor.
 
 - Class: text
-  Output: In the following question you will be asked to modify a script that will
-    appear as soon as you move on from this question. When you have finished modifying
-    the script, save your changes to the script and type submit() and the script
-    will be evaluated. There will be some comments in the script that opens up, so be
-    sure to read them!
+  Output: Nas questões seguintes você terá que modificar um script que irá aparecer assim que você for passando entre as questões. Salve as modificacoes no script e digite submit() e o script será avaliado. Há alguns comentérios no script quando ele abrir. Leia estes comentários!
 
 - Class: script
   Output: The last R expression to be evaluated in a function will become the 
