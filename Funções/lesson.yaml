@@ -35,8 +35,7 @@ enquanto outras funcoes manipulam os dados entrados para computar o valor de ret
   Hint: "Compute  a média de  2, 4, e 5  digitando: mean(c(2, 4, 5))"
 
 - Class: text
-  Output: Funcoes normalmente recebem argumentos os quais sao variaveis as quais as  funcoes [matemáticas].
-  Por exemplo, a funcao mean()recebe um vetor como um argumento, como no caso de mean(c(2,6,8)). A funcao mean() entao soma todos os números do vetor e divide essa soma pelo comprimento do vetor.
+  Output: Funcoes normalmente recebem argumentos os quais sao variaveis as quais as  funcoes [matemáticas]. Por exemplo, a funcao mean()recebe um vetor como um argumento, como no caso de mean(c(2,6,8)). A funcao mean() entao soma todos os números do vetor e divide essa soma pelo comprimento do vetor.
 
 - Class: text
   Output: Nas questões seguintes você terá que modificar um script que irá aparecer assim que você for passando entre as questões. Salve as modificacoes no script e digite submit() e o script será avaliado. Há alguns comentérios no script quando ele abrir. Leia estes comentários!
