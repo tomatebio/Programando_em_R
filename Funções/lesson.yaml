@@ -41,290 +41,220 @@ enquanto outras funcoes manipulam os dados entrados para computar o valor de ret
   Output: Nas questões seguintes você terá que modificar um script que irá aparecer assim que você for passando entre as questões. Salve as modificacoes no script e digite submit() e o script será avaliado. Há alguns comentérios no script quando ele abrir. Leia estes comentários!
 
 - Class: script
-  Output: The last R expression to be evaluated in a function will become the 
-    return value of that function. We want this function to take one argument, 
-    x, and return x without modifying it. Delete the pound
-    sign so that x is returned without any modification. Make sure to save your
-    script before you type submit().
+  Output: A última expressao no R será avaliada em uma funcao que ira retornar o valor daquela funcao. Nós queremos que a funcao receba um argumento, x, e retorna x sem modifica-lo. Delete o "#" para que isso aconteca. Não esqueca de salvar seu script antes de digitar submit().
   AnswerTests: test_func1()
-  Hint: Make sure to delete the pound sign so the last expression in the function is just x.
+  Hint:  Verifique se deletou o "#" antes do x dentro da funcao.
   Script: boring_function.R
 
 - Class: cmd_question
-  Output: "Now that you've created your first function let's test it! Type: 
-    boring_function('My first function!'). If your function works, it should
-    just return the string: 'My first function!'"
+  Output: "Agora que voce criou sua primeira funcao vamos testa-la! Digite: boring_function("My first function!"). Se sua funcao funcionar, a resposta será a string: "My first function!"
   CorrectAnswer: "boring_function('My first function!')"
   AnswerTests: omnitest(correctExpr="boring_function('My first function!')")
-  Hint: "Test boring_function by typing: boring_function('My first function!')"
+  Hint: "Teste boring_function  digitando: boring_function('My first function!')"
 
 - Class: text
-  Output: "Congratulations on writing your first function. By writing functions,
-    you can gain serious insight into how R works. As John Chambers, the creator
-    of R once said:\n\n To understand computations in R, two slogans are helpful:
-    1. Everything that exists is an object. 2. Everything that happens is a function call."
+  Output: "Parabens pela sua primeira funcao. Ao escrever funcoes, voce entende melhor como o R funciona. Como John Chambers, o criador do R uma vez disse: \n\n Para entender como o R funciona o R, dois slogans são úteis: 1. Tudo que existe no R é um objeto. 2. Tudo que acontece é uma chamada de uma funcao."
+
 
 - Class: cmd_question
-  Output: "If you want to see the source code for any function, just type the
-    function name without any arguments or parentheses. Let's try this out with
-    the function you just created. Type: boring_function to view its source code."
+  Output: " Se voce quiser ver o codigo fonte para qualquer funcao, apenas digite o nome da funcao sem qualquer argumento ou parenteses. Vamos tentar isso com a funcao que voce acabou de criar. Digite boring_function para ver seu codigo fonte."
   CorrectAnswer: boring_function
   AnswerTests: omnitest(correctExpr='boring_function')
-  Hint: "To see the source code for boring_function just type: boring_function"
+  Hint: "Para ver o codigo fonte apenas digite: boring_function"
 
 - Class: text
-  Output: "Time to make a more useful function! We're going to replicate the
-    functionality of the mean() function by creating a function called: my_mean().
-    Remember that to calculate the average of all of the numbers in a vector you
-    find the sum of all the numbers in the vector, and then divide that sum by the
-    number of numbers in the vector." 
+  Output: "Agora é o momento de fazer uma funcao mais útil! Nós vamos replicar a funcao mean() criando a funcao chamada: my_mean(). Lembre-se que para calcular a média de todos os números em um vetor voce acha a soma de todos os números em um vetor, e dividir a soma pelo comprimento desse vetor."
+
 
 - Class: script
-  Output: Make sure to save your script before you type submit().
+  Output: Tenha certeza de salvar seu script antes de digitar submit().
   AnswerTests: test_func2()
-  Hint: "Use the sum() function to find the sum of all the numbers in the vector. Use
-    the length() function to find the size of the vector."
+  Hint: "Use a funcao sum() para somar todos os números em um vetor. Use a funcao length para achar o comprimento desse vetor."
   Script: my_mean.R
   
 - Class: cmd_question
-  Output: "Now test out your my_mean() function by finding the mean of the vector
-    c(4, 5, 10)."
+  Output: "Agora teste sua funcao my_mean() achando a média do vetor c(4,5,10)."
   CorrectAnswer: my_mean(c(4, 5, 10))
   AnswerTests: omnitest(correctExpr='my_mean(c(4, 5, 10))')
-  Hint: "Run the command my_mean(c(4, 5, 10)) to test out your new function." 
+  Hint: "Rode a funcao my_mean(c(4, 5, 10))  para testar tua nova funcao." 
 
 - Class: text
-  Output: "Next, let's try writing a function with default arguments. You can set
-    default values for a function's arguments, and this can be useful if you think
-    someone who uses your function will set a certain argument to the same value
-    most of the time."
+  Output: "Agora, vamos tentar escrever uma funcao com argumentos padroes. Voce pode configurar valores para os argumentos da sua funcao, e isso pode ser útil se voce pensar que alguem que irá usar a sua funcao vai configurar o argumento com o mesmo valor na maioria das vezes."
 
 - Class: script
-  Output: Make sure to save your script before you type submit().
+  Output: Tenha certeza em salvar seu script antes de digitar submit().
   AnswerTests: test_func3()
-  Hint: "Remember to set the appropriate default values!"
+  Hint: "Lembre-se de configurar os valores apropriados!"
   Script: remainder.R
 
 - Class: cmd_question
-  Output: "Let's do some testing of the remainder function. Run remainder(5)
-    and see what happens."
+  Output: "Vamos fazer alguns testes com a funcao remainder. Rode remainder(5) e veja o que acontece."
   CorrectAnswer: remainder(5)
   AnswerTests: omnitest(correctExpr='remainder(5)')
-  Hint: "Let's test your remainder function by running: remainder(5)"
+  Hint: "Vamos testar digitando: remainder(5)"
 
 - Class: text
-  Output: "Let's take a moment to examine what just happened. You provided one
-    argument to the function, and R matched that argument to 'num' since 'num'
-    is the first argument. The default value for 'divisor' is 2, so the function
-    used the default value you provided."
-
+  Output: "Vamos examinar o que aconteceu. Voce providenciou um argumento para a funcao, e o R combina o argumento "num" desde que "num" é o primeiro argumento. O valor padrao para "divisor" é 2, entao a funcao usa o valor padrao que voce providenciou.
+  
 - Class: cmd_question
-  Output: "Now let's test the remainder function by providing two arguments.
-    Type: remainder(11, 5) and let's see what happens."
+  Output: "Agora vamos testar a funcao remainder providenciando dois argumentos.  Digite remainder(11, 5) e vamos ver o que acontece."
   CorrectAnswer: remainder(11, 5)
   AnswerTests: omnitest(correctExpr='remainder(11, 5)')
-  Hint: "Let's test your remainder function by running: remainder(11, 5)"
+  Hint: "Vamos testar a sua funcao  remainder digitando: remainder(11, 5)"
 
 - Class: text
-  Output: "Once again, the arguments have been matched appropriately."
+  Output: "Mais uma vez os argumentos foram combinados da maneira correta."
 
 - Class: cmd_question
-  Output: "You can also explicitly specify arguments in a function. When you
-    explicitly designate argument values by name, the ordering of the arguments
-    becomes unimportant. You can try this out by typing: 
-    remainder(divisor = 11, num = 5)."
+  Output: "Voce pode expecificar os argumentos de forma explicita para uma funcao. Quando voce explicitamente designa um argumento pelo nome, a ordem dos argumentos torna-se não importante. Voce pode tentar isso digitando: remainder(divisor = 11, num = 5)."
   CorrectAnswer: remainder(divisor = 11, num = 5)
   AnswerTests: omnitest(correctExpr='remainder(divisor = 11, num = 5)')
-  Hint: "Order no longer matters when you explicity state argument values! Test
-  this out by typing: remainder(divisor = 11, num = 5)"
+  Hint: " A ordem não interessa quando voce explicita o argumento! Test isso digitando: remainder(divisor = 11, num = 5)"
 
 - Class: text
-  Output: "As you can see, there is a significant difference between
-    remainder(11, 5) and remainder(divisor = 11, num = 5)!"
+  Output: "Como voce pode ver, há uma diferenca entre  remainder(11, 5) e remainder(divisor = 11, num = 5)!"
 
 - Class: cmd_question
-  Output: "R can also partially match arguments. Try typing remainder(4, div = 2)
-    to see this feature in action."
+  Output: "O R pode combinar parcialmente os argumentos. Tente digitar remainder(4, div = 2) para ver esta caracteristica em aćao."
   CorrectAnswer: remainder(4, div = 2)
   AnswerTests: omnitest(correctExpr='remainder(4, div = 2)')
-  Hint: "Test out partial matching by typing: remainder(4, div = 2)"
+  Hint: "Teste a combinacao parcial digitando remainder(4, div = 2)"
 
 - Class: text
-  Output: "A word of warning: in general you want to make your code as easy to
-    understand as possible. Switching around the orders of arguments by
-    specifying their names or only using partial argument names can be
-    confusing, so use these features with caution!"
+  Output: "UMA PALAVRA DE AVISO: de modo geral voce quer fazer um codigo que seja o mais facil de ser entendido. Trocando a ordem dos argumentos especificando seus nomes ou usando nomes de argumentos parciais pode ser confuso, use isso com cuidado!" 
 
 - Class: cmd_question
-  Output: "With all of this talk about arguments, you may be wondering if there
-    is a way you can see a function's arguments (besides looking at the 
-    documentation). Thankfully, you can use the args() function! Type:
-    args(remainder) to examine the arguments for the remainder function."
+  Output: "Com tudo o que falamos sobre argumentos, Você pode estar se perguntando se tem uma maneira que você pode ver os argumentos de uma função (além de olhar para a documentação). Ainda bem, voce pode usar a funcao args()! Digite: args(remainder) para examinar os argumentos para a funcao remainder."
   CorrectAnswer: args(remainder)
   AnswerTests: omnitest(correctExpr='args(remainder)')
-  Hint: "Look at the arguments of the remainder function by typing: 
-    args(remainder)"
+  Hint: " Veja os argumentos da funcao remainder digitando: args(remainder)"
 
 - Class: text
-  Output: "You may not realize it but I just tricked you into doing something
-    pretty interesting! args() is a function, remainder() is a function, yet
-    remainder was an argument for args(). Yes it's true: you can pass functions
-    as arguments! This is a very powerful concept. Let's write a script to see
-    how it works."
+  Output: "Você pode não perceber, mas eu apenas enganei você para fazer algo
+    bastante interessante! args() é uma função, o remainder () é uma função, ainda remainder foi um argumento para args (). Sim, é verdade: você pode passar funções como argumentos! Este é um conceito muito poderoso. Vamos escrever um script para ver como funciona."
 
 - Class: script
-  Output: Make sure to save your script before you type submit().
+  Output: Salve seu script antes de digitar submit().
   AnswerTests: test_func4()
-  Hint: "Make sure that when you pass a function as an argument you pass the
-    name of the function without parentheses!"
+  Hint: "Esteja certo que quando voce passa uma funcao como um argumento voce passa o nome da funcao sem parenteses!"
   Script: evaluate.R
 
 - Class: cmd_question
-  Output: "Let's take your new evaluate() function for a spin! Use evaluate to 
-    find the standard deviation of the vector c(1.4, 3.6, 7.9, 8.8)."
+  Output: "Vamos pegar sua nova função evaluate() para ver! Use evaluate para
+    encontrar o desvio padrão do vetor c(1.4, 3.6, 7.9, 8.8)."
   CorrectAnswer: evaluate(sd, c(1.4, 3.6, 7.9, 8.8))
   AnswerTests: omnitest(correctExpr='evaluate(sd, c(1.4, 3.6, 7.9, 8.8))')
-  Hint: "The function for standard deviation is called sd(). Make sure that when
-    you pass a function as an argument you pass the
-    name of the function without parentheses!"
+  Hint: " A funcao para desvio padrao é chamado sd(). Esteja certo que quando vc passa uma funcao como um argumento voce passa o nome da funcao sem parenteses!"
+
 
 - Class: text
-  Output: "The idea of passing functions as arguments to other functions is an 
-    important and fundamental concept in programming."
+  Output: " A idea de passar funcoes como argumentos para outras funcoes é um conceito importante e fundamental em programaćao."
 
 - Class: text
-  Output: "You may be surprised to learn that you can pass a function as an
-    argument without first defining the passed function. Functions that are not
-    named are appropriately known as anonymous functions."
+  Output: "Voce pode estar surpreso em aprender que voce pode passar uma funcao como um argumento sem primeiro definir a funcao passada. Funcoes que nao sao nomeadas sao conhecidas como funcoes anonimas."
 
 - Class: text
-  Output: "Let's use the evaluate function to explore how anonymous functions 
-    work. For the first argument of the evaluate function we're going to write a
-     tiny function that fits on one line. In the second argument we'll pass some
-     data to the tiny anonymous function in the first argument."
+  Output: "Vamos usar a funcao evaluate para explorar como funciona as funcoes anonimas. Para o primeiro argumento da funcao evaluate nós vamos escrever uma pequena funcao que ajusta uma linha. No segundo argumento nós vamos passar alguns dados para esta pequena funcao anonima que passamos como primeiro argumento." 
 
 - Class: cmd_question
-  Output: "Type the following command and then we'll discuss how it works: 
-    evaluate(function(x){x+1}, 6)"
+  Output: "Digite o seguinte comando e então nós vamos discutir com ela funciona  evaluate(function(x){x+1}, 6)"
   CorrectAnswer: evaluate(function(x){x+1}, 6)
   AnswerTests: test_eval1()
-  Hint: "Just type the command evaluate(function(x){x+1}, 6)"
+  Hint: "Apenas digite o comandoevaluate(function(x){x+1}, 6)"
 
 - Class: text
-  Output: "The first argument is a tiny anonymous function that takes one argument
-  `x` and returns `x+1`. We passed the number 6 into this function so the entire
-  expression evaluates to 7."
+  Output: "O primeiro argumento é uma pequena funcao anonima que recebe um argumento e retorna "x+1". Nós passamos o número 6 para essa funcao então a expressao avalia para 7."
+
 
 - Class: cmd_question
-  Output: "Try using evaluate() along with an anonymous function to return the 
-    first element of the vector c(8, 4, 0). Your anonymous function should only
-    take one argument which should be a variable `x`."
+  Output: "Tente usar evaluate() para uma funcao anonima que retorna o primeiro elemento do vetor c(8,4,0). Sua funcao anonima deve receber um argumento o qual deve ser a variavel "x".
   CorrectAnswer: evaluate(function(x){x[1]}, c(8, 4, 0))
   AnswerTests: test_eval2()
-  Hint: "You may need to recall how to index vector elements. Remember that your
-    anonymous function should only have one argument, and that argument should
-    be named `x`."
+  Hint: " Voce deve lembrar como indexar os elementos de um vetor. Lembre que sua funcao anonima deve ter apenas um argumento e que este argumento deve ser nomeado como "x".
 
 - Class: cmd_question
-  Output: "Now try using evaluate() along with an anonymous function to return the 
-    last element of the vector c(8, 4, 0). Your anonymous function should only
-    take one argument which should be a variable `x`."
+  Output: " Agora tente usar evaluate() com uma funcao anonima que retorna o último elemento do  elemento do vetor c(8,4,0). Sua funcao anonima deve receber um argumento o qual deve ser a variavel "x".
+
   CorrectAnswer: evaluate(function(x){x[length(x)]}, c(8, 4, 0))
   AnswerTests: test_eval3()
-  Hint: "You may need to recall how to index vector elements. Remember that your
-    anonymous function should only have one argument, and that argument should
-    be named `x`. Using the length() function in your anonymous function may 
-    help you."
+  Hint: "Voce deve lembrar como indexar os elementos de um vetor. Lembre que sua funcao anonima deve ter apenas um argumento e que este argumento deve ser nomeado como "x". Usando length() em sua funcao anonima pode ser útil."
 
 - Class: cmd_question
-  Output: "For the rest of the course we're going to use the paste() function
-    frequently. Type ?paste so we can take a look at the documentation for the 
-    paste function."
+  Output: " Usaremos a funcao paste com bastante frequencia a partir de agora. Digite ?paste para ver a documentacao para esta funcao."
   CorrectAnswer: ?paste
   AnswerTests: omnitest(correctExpr='?paste')
-  Hint: "Just type: ?paste"
+  Hint: "Apenas digite: ?paste"
 
 - Class: text
-  Output: "As you can see the first argument of paste() is `...` which is referred
-    to as an ellipsis or simply dot-dot-dot. The ellipsis allows an indefinite 
-    number of arguments to be passed into a function. In the case of paste() any
-    number of strings can be passed as arguments and paste() will return all of 
-    the strings combined into one string."
+  Output: " Como voce pode ver o primeiro argumento de paste() é "..." o qual é referido como reticencias ou ponto-ponto-ponto.  As reticencias permite que um número indefinido de argumentos possam ser passados para a funcao. No caso de paste() qualquer número de strings pode ser passado como argumento e paste() irá retornar todos eles combinados em um único string."
+
 
 - Class: cmd_question
-  Output: 'Just to see how paste() works, type paste("Programming", "is", "fun!")'
+  Output: ' Para ver como paste() funciona, digite paste("Programming", "is", "fun!")'
   CorrectAnswer: paste("Programming", "is", "fun!")
   AnswerTests: omnitest(correctExpr='paste("Programming", "is", "fun!")')
-  Hint: 'Just type: paste("Programming", "is", "fun!")'
+  Hint: 'Digite: paste("Programming", "is", "fun!")'
 
 - Class: text
-  Output: "Time to write our own modified version of paste()."
+  Output: "Agora é hora de escrever sua própria funcao modificada de paste()."
+ 
 
 - Class: script 
-  Output: Make sure to save your script before you type submit().
+  Output: Não esqueća de salvar seu script antes de digitar submit().
   AnswerTests: test_func5()
-  Hint: "Remember that arguments can come after ..."
+  Hint: "Lembre-se que os argumentos vão depois de ..."
   Script: telegram.R
 
 - Class: cmd_question
-  Output: "Now let's test out your telegram function. Use your new telegram 
-    function passing in whatever arguments you wish!"
+  Output: "Vamos testar sua funcao telegrama. Use sua nova funcao telegram passando qualquer argumento que voce quiser!."
   CorrectAnswer: telegram()
   AnswerTests: expr_uses_func('telegram')
-  Hint: 'Use the telegram function with whatever arguments you want to use.'
+  Hint: 'Use  a funcao telegram com qualquer argumento que voce quiser."
 
 - Class: script
-  Output: Make sure to save your script before you type submit().
+  Output:  Não esqueća de salvar seu script antes de digitar submit().
   AnswerTests: test_func6()
-  Hint: "Your function should have three sections: capture the ellipsis in a 
-    list(), unpack the arguments from the ellipsis and assign them to variables,
-    then pass those variables to paste()."
+  Hint: " Sua funcao deve ter tres secoes: capturar as reticencias em uma list(), desempacotar os argumentos das reticencias e atribui-los a variaveis, e entao passar estas variaveis para o paste().
   Script: mad_libs.R
 
 - Class: cmd_question
-  Output: "Time to use your mad_libs function. Make sure to name the place, 
-    adjective, and noun arguments in order for your function to work."
+  Output: " Agora use sua funcao mad_libs. Esteja certo de nomear o lugar, o adjetivo e o substantivo na ordem que sua funcao usa.
   CorrectAnswer: mad_libs(adjective = "", place = "", noun = "")
   AnswerTests: expr_uses_func('mad_libs')
-  Hint: 'Use the mad_libs function and be sure to name place, adjective, and 
-  noun arguments.'
+  Hint: 'Use a funcao mad_libs e esteja certo que os argumentos place, adjective e noun estejam nomeados corretamente.
 
 - Class: text
-  Output: "We're coming to the end of this lesson, but there's still one more
-    idea you should be made aware of."
+  Output: "Nós estamos indo para o final dessa licao. mas há ainda uma ideia que gostaria que voce pensasse."
 
 - Class: text
-  Output: "You're familiar with adding, subtracting, multiplying, and dividing
-    numbers in R. To do this you use the +, -, *, and / symbols. These symbols
-    are called binary operators because they take two inputs, an input from the
-    left and an input from the right."  
+  Output: " Voce é familiar com a adicao, subtracao, multiplicacao e divisao de números no R. Para fazer isso voce usa os simbolos  +,_,* e /. Estes simbolos são chamados operadores binários pois eles recebem duas entradas, uma a esquerda e outra a direita."
+ 
 
 - Class: text
-  Output: "In R you can define your own binary operators. In the next script
-    I'll show you how."
+  Output: " No R voce pode definir seus próprios operadores binários. No próximo script voce vai ver como."
 
 - Class: script
-  Output: Make sure to save your script before you type submit().
+  Output:  Não esqueća de salvar seu script antes de digitar submit()
   AnswerTests: test_func7()
-  Hint: "Remember: 'Hello' %p% 'student!' is how you use the binary operator."
+  Hint: "lembre-se: 'Hello' %p% 'student!'  é como se usa o operador binário"
   Script: bin_op.R
 
 - Class: cmd_question
-  Output: "You made your own binary operator! Let's test it out. Paste together
-    the strings: 'I', 'love', 'R!' using your new binary operator."
+  Output: "Voce fez o seu operador binário! Vamos testa-lo. Junte  as strings: 'I', 'love', 'R!'  usando o seu novo operador binário"
   CorrectAnswer: "'I' %p% 'love' %p% 'R!'"
   AnswerTests: omnitest(correctExpr="'I' %p% 'love' %p% 'R!'")
-  Hint: 'Use %p% in between each string.'
+  Hint: 'Use %p% entre cada string.'
 
 - Class: text
-  Output: "We've come to the end of our lesson! Go out there and write some
-    great functions!"
+  Output: " Voce chegou ao final dessa licao. Agora voce pode escrever funcoes e ganhar o mundo. Funcoes com nomes são as mais comuns e usadas para todos os propositos. Funcoes anonimas são usadas para pequenas transformacoes nos dados e, normalmente usadas dentro de outras funcoes. Operadores binários facilitam a compreensao do código. Depende de qual uso você quer fazer." 
+- Class: text
+  Output:  "Prefira dividir as tarefas em várias funcoes diferentes ao inves de fazer uma grande funcao que faća tudo de uma vez. Isso facilita o processo de testes e correcao alem de deixar o código muito mais amigavel e legivel.
 
+ 
 - Class: mult_question
-  Output: Would you like to inform someone about your successful completion of 
-    this lesson via email?
-  CorrectAnswer: NULL
-  AnswerChoices: Yes; No
-  AnswerTests: notify()
-  Hint: NULL
+  Output: Você quer enviar o log  dessa sessão?
+  AnswerChoices: Sim;Não
+  CorrectAnswer: Sim
+  AnswerTests: submit_log()
+  Hint: Type a hint.
   
