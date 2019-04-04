@@ -1,0 +1,113 @@
+- Class: meta
+  Course: R Programming E
+  Lesson: Missing Values
+  Author: Nick Carchedi
+  Type: Standard
+  Organization: JHU Biostat
+  Version: 2.2.0
+
+- Class: text
+  Output: Valores faltantes são importantes na estatistica e analise de dados. Frequentemente, valores faltantes não devem ser ignorados mas eles devem ser analisados com cuidado pois pode haver algum padrao ou causa.
+
+- Class: text
+  Output: No R, NA é usado para representar valores "não disponiveis" ou  "faltantes". Nessa licao, nós vamos explorar estes valores um pouco mais.
+
+- Class: cmd_question
+  Output: Qualquer operacao envolvendo NA geralmente retorna NA como resultado. Para ilustrar isso, vamos criar um vetor  c(44, NA, 5, NA) e atribuir a variavel x.
+  CorrectAnswer: x <- c(44, NA, 5, NA)
+  AnswerTests: omnitest(correctExpr='x <- c(44, NA, 5, NA)')
+  Hint: Atribua o vetor c(44, NA, 5, NA) a  variavel X. NA deve estar em caixa alta.
+
+- Class: cmd_question
+  Output:  Agora, vamos multiplicar por 3.
+  CorrectAnswer: x * 3
+  AnswerTests: any_of_exprs('x * 3', '3 * x')
+  Hint: Tente x * 3.
+
+- Class: text
+  Output: Veja que o elemento resultante do vetor correspondente ao valor NA também é NA.
+
+- Class: cmd_question
+  Output: Para fazer as coisas um pouco mais interessante, vamos criar um vetor com 1000 sorteios seguindo uma distribuicao normal com y <- rnorm(1000).
+  CorrectAnswer: y <- rnorm(1000)
+  AnswerTests: omnitest(correctExpr='y <- rnorm(1000)')
+  Hint: A funcao  rnorm() gera números aleatorios a partir de uma distribuicao normal. Digite y <- rnorm(1000).
+
+- Class: cmd_question
+  Output: Agora, vamos criar um vetor contendo 1000 NA com  z <- rep(NA, 1000).
+  CorrectAnswer: z <- rep(NA, 1000)
+  AnswerTests: omnitest(correctExpr='z <- rep(NA, 1000)')
+  Hint: Digite  z <- rep(NA, 1000)  para gerar o vetor com 1000 NAs.
+
+- Class: cmd_question
+  Output: Agora, vamos selecionar 100 elementos aleatoriamente entre estes 2000 valores (combinando y e z) de forma que nós não saibamos quantos  NAs estarão presentes nem quais as posićoes em nosso vetor final. Digite  my_data <- sample(c(y, z), 100).
+  CorrectAnswer: my_data <- sample(c(y, z), 100)
+  AnswerTests: omnitest(correctExpr='my_data <- sample(c(y, z), 100)')
+  Hint: A funcao sample() sorteia uma amostra aleatoria dos dados são passados como primeiro argumento (nesse caso c(y, z)) com o tamanho especificado no segundo argumento. O comando  my_data <- sample(c(y, z), 100)  irá dar o que nós queremos.
+
+- Class: cmd_question
+  Output: Vamos primeiro saber onde os NAs estão dentro do nosso vetor. A funcao is.na() nos diz quais elementos do vetor é NA. Digite is.na() sobre my_data e atribua o resultado a my_na.
+  CorrectAnswer: my_na <- is.na(my_data)
+  AnswerTests: omnitest(correctExpr='my_na <- is.na(my_data)')
+  Hint: Atribua o resultado de  is.na(my_data)  a variavel my_na.
+
+- Class: cmd_question
+  Output: Agora, imprima my_na para ver o que aparece.
+  CorrectAnswer: my_na
+  AnswerTests: omnitest(correctExpr='my_na')
+  Hint: Digite  my_na para ver o seu conteudo.
+
+- Class: text
+  Output: Todos elementos que estão marcados como TURE, em my_na, correspondem a um elemento no my_data que é NA. Do mesmo modo, os elementos marcados como FALSE, correspondem a elementos de my_data que são números sorteados da distribuicão normal.
+
+- Class: cmd_question
+  Output: Nas aulas passadas sobre operadores lógicos, nós introduzimos o operador "==" como um metódo para testar a igualdade entre dois objetos. Então, voce pode estar pensando que a expressão  my_data == NA  gera o mesmo resultado que  is.na().  Tente isso.
+  CorrectAnswer: my_data == NA
+  AnswerTests: omnitest(correctExpr='my_data == NA')
+  Hint: Tente my_data == NA para ver o que acontece.
+
+- Class: text
+  Output: A razão pela qual você tem um vetor em que todos são  NAs é que NA não é realmente um valor, mas apenas uma palavra reservada para uma quantidade que não está disponível. Portanto, a expressão lógica é incompleta e o  R não tem escolha senão retornar um vetor do mesmo tamanho que my_data que contém todos os NAs
+
+- Class: text
+  Output: Não se preocupe se isso está um tanto confuso para você. O que você deve guardar é que você deve ser cauteloso quando usar expressoes logicas quando NAs podem estar presentes. Um único valor NA pode alterar todo o resultado.
+
+
+- Class: text
+  Output: Voltando para a tarefa. Agora que temos o vetor, my_na, que tem TRUE para todo NA e FALSE para todo valor númerico, nós podemos calcular o número total de NAs nos dados.
+
+- Class: text
+  Output: O truque é conhecer como as coisas são computadas, o R representa TRUE como o número 1 e FALSE como o número 0. Então, se somarmos um monte de TRUE e FALSE, nós teremos o número total de TRUE.
+
+- Class: cmd_question
+  Output: Vamos tentar isso. Use a funcao sum() sobre o vetor my_na para contar o número total de TRUE no my_na, ou seja,  o número total de NAs em my_data. Não atribua este resultado a uma nova variavel.
+  CorrectAnswer: sum(my_na)
+  AnswerTests: omnitest(correctExpr='sum(my_na)')
+  Hint: Use sum(my_na) para contar os NAs.
+
+- Class: cmd_question
+  Output: Pretty cool, huh? Finally, let's take a look at the data to convince ourselves that everything 'adds up'. Print my_data to the console.
+  CorrectAnswer: my_data
+  AnswerTests: omnitest(correctExpr='my_data')
+  Hint: Print my_data to the console.
+
+- Class: cmd_question
+  Output: Now that we've got NAs down pat, let's look at a second type of missing value -- NaN, which stands for 'not a number'. To generate NaN, try dividing (using a forward slash) 0 by 0 now.
+  CorrectAnswer: 0/0
+  AnswerTests: omnitest(correctExpr='0/0')
+  Hint: Try 0/0.
+
+- Class: cmd_question
+  Output: Let's do one more, just for fun. In R, Inf stands for infinity. What happens if you subtract Inf from Inf?
+  CorrectAnswer: Inf - Inf
+  AnswerTests: omnitest(correctExpr='Inf - Inf')
+  Hint: Type Inf - Inf. Can you guess the result?
+
+- Class: mult_question
+  Output: Would you like to inform someone about your successful completion of 
+    this lesson via email?
+  CorrectAnswer: NULL
+  AnswerChoices: Yes; No
+  AnswerTests: notify()
+  Hint: NULL
+  
