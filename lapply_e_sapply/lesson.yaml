@@ -203,7 +203,7 @@
   Hint: Digite unique_vals para ver o conteúdo.
 
 - Class: cmd_question
-  Output:  Como unique_vals é uma lista, você pode usar o que aprendeu para determinar o comprimento de cada elemento em unique_vals ( ou seja, o número de valores únicos para cada variavel). Simplifique o resultado, se possível. Dica: use a função  length() para cada elemento de unique_vals.
+  Output: Como unique_vals é uma lista, você pode usar o que aprendeu para determinar o comprimento de cada elemento em unique_vals ( ou seja, o número de valores únicos para cada variavel). Simplifique o resultado, se possível. Dica; use a função  length() para cada elemento de unique_vals.
   CorrectAnswer: sapply(unique_vals, length)
   AnswerTests: omnitest(correctExpr='sapply(unique_vals, length)')
   Hint: Use  a função  length() para cada elemento de  unique_vals usando sapply(). Lembre-se de não colocar parenteses depois do nome da função que você está aplicando (neste caso, length)
