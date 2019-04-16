@@ -280,6 +280,6 @@
   AnswerTests: submit_log()
   Class: mult_question
   CorrectAnswer: Sim
-  Hint: ""
+  Hint: "Envie"
   Output: "Você quer enviar o log  dessa sessão?"
 
