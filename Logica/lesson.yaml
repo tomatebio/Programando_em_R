@@ -155,8 +155,7 @@
   Output: "Como você pode se lembrar existe uma ordem entre os  operadores aritméticos como também nas expressões lógicas. Todos os operadores E são avaliados antes operadores OU. Vamos olhar um exemplo de um caso ambíguo. Digite:  5 > 8 || 6 != 8 && 4 > 3.9"
 - 
   Class: text
-  ? "Output:\" Vamos dar uma olhada na ordem dos operadores no caso acima. Primeiro os operandos esquerdo e o direito do operador E são avaliados. 6 não é igual a 8, 4 é maior que 3.9, então ambos operadores são TRUE resultando na expressão  `TRUE && TRUE`  avalia como TRUE. Então o operando esquerdo do operador é avaliado"
-  : "5 não é maior que 8 então a expressão inteira é reduzida para FALSE || TRUE. Uma vez que  o operando direito dessa expressão é TRUE  a expressão inteira que é avaliada como TRUE.\""
+  Output: " Vamos dar uma olhada na ordem dos operadores no caso acima. Primeiro os operandos esquerdo e o direito do operador E são avaliados. 6 não é igual a 8, 4 é maior que 3.9, então ambos operadores são TRUE resultando na expressão  `TRUE && TRUE`  avalia como TRUE. Então o operando esquerdo do operador é avaliado 5 não é maior que 8 então a expressão inteira é reduzida para FALSE || TRUE. Uma vez que  o operando direito dessa expressão é TRUE  a expressão inteira que é avaliada como TRUE."
 - 
   AnswerChoices: "TRUE && FALSE || 9 >= 4 && 3 < 6; TRUE && 62 < 62 && 44 >= 44; 99.99 > 100 || 45 < 7.3 || 4 != 4.0; FALSE || TRUE && FALSE"
   AnswerTests: "omnitest(correctVal='TRUE && FALSE || 9 >= 4 && 3 < 6')"
@@ -280,6 +279,6 @@
   AnswerTests: submit_log()
   Class: mult_question
   CorrectAnswer: Sim
-  Hint: "Envie"
+  Hint: Envie
   Output: "Você quer enviar o log  dessa sessão?"
 
