@@ -37,7 +37,7 @@ submit_log <- function(){
   cat("Preparando o envio ...\n")
   library(googlesheets4)
   suppressMessages(library(dplyr))
-  # Please edit the link below
+  
   
   
   # Do not edit the code below

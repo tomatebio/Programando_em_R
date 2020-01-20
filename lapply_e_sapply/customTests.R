@@ -37,8 +37,6 @@ submit_log <- function(){
   cat("Preparando o envio ...\n")
   library(googlesheets)
   suppressMessages(library(dplyr))
-  # Please edit the link below
-  answer<-gs_key("1bkrQ8_-2kbR4-Hrk5t0nWOeX1tzC6Nayxkmk_jfVL0Q",  lookup = FALSE, visibility = "private")
   
   # Do not edit the code below
   
@@ -60,8 +58,9 @@ submit_log <- function(){
   encoded_log <- base64encode(temp)
     #browseURL(paste0(pre_fill_link, encoded_log))
 
-  #  answer<- answer %>%
-  gs_add_row(answer,input=data.frame(Sys.time(),encoded_log))
+  #  answer
+  input<-data.frame(Sys.time(),encoded_log)
+  sheets_append(input, ss="1pawl9xGARVHsHIHkXb8bDOFihw1_FL-Fh5TXbluHjbQ", sheet = "Respostas")
    return(TRUE)
     
 }
