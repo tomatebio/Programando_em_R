@@ -1,11 +1,11 @@
 # Put custom tests in this file.
-      
+
 # Uncommenting the following line of code will disable
 # auto-detection of new variables and thus prevent swirl from
 # executing every command twice, which can slow things down.
-      
+
 #AUTO_DETECT_NEWVAR <- FALSE
-      
+
 # However, this means that you should detect user-created
 # variables when appropriate. The answer test, creates_new_var()
 # can be used for for the purpose, but it also re-evaluates the
@@ -38,12 +38,11 @@ submit_log <- function(){
   library(googlesheets)
   suppressMessages(library(dplyr))
   # Please edit the link below
-  answer<-gs_key("1bkrQ8_-2kbR4-Hrk5t0nWOeX1tzC6Nayxkmk_jfVL0Q",  lookup = FALSE, visibility = "private")
-  
+
   # Do not edit the code below
-  
+
   p <- function(x, p, f, l = length(x)){if(l < p){x <- c(x, rep(f, p - l))};x}
-  
+
   temp <- tempfile()
   log_ <- getLog()
   nrow_ <- max(unlist(lapply(log_, length)))
@@ -60,10 +59,9 @@ submit_log <- function(){
   encoded_log <- base64encode(temp)
     #browseURL(paste0(pre_fill_link, encoded_log))
 
-  #  answer<- answer %>%
-  gs_add_row(answer,input=data.frame(Sys.time(),encoded_log))
-   return(TRUE)
-    
+    #  answer
+    input<-data.frame(Sys.time(),encoded_log)
+    sheets_append(input, ss="1pawl9xGARVHsHIHkXb8bDOFihw1_FL-Fh5TXbluHjbQ", sheet = "Respostas")
+
+
 }
-
-
