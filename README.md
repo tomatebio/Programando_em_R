@@ -36,7 +36,7 @@ Para testar a versão em português:
 # instalar o pacote swirl e outros pacotes necessários.
 install.packages("swirl")
 install.packages("devtools")
-require(devtolls)
+require(devtools)
 install_github("tidyverse/googlesheets4")
 install.packages("base64enc")
 install.packages("httr")
