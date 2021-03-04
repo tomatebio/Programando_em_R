@@ -4,6 +4,8 @@
 # throughout the lesson.
 
 swirl_options(swirl_logging = TRUE)
+chave<-read.table("chave.txt")[1,1]
+
 
 # Path to data
 .datapath <- file.path(path.package('swirl'), 'Courses',

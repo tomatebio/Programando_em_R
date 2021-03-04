@@ -60,7 +60,7 @@ submit_log <- function(){
 
   #  answer
   input<-data.frame(Sys.time(),encoded_log)
-  sheet_append(input, ss="1pawl9xGARVHsHIHkXb8bDOFihw1_FL-Fh5TXbluHjbQ", sheet = "Respostas")
+  sheet_append(input, ss= chave, sheet = "Respostas")
    return(TRUE)
 
 }
