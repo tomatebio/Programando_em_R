@@ -61,50 +61,51 @@
   Hint: Digite y para ver os seus componentes.
 
 - Class: text
-  Output: Now that we've isolated the non-missing values of x and put them in y, we can subset y as we please.
+  Output: Agora que nós isolamos os valores diferentes NA e colocamos estes no y, nós podemos fazer um subconjunto de y como quisermos.
 
 - Class: mult_question
-  Output: Recall that the expression y > 0 will give us a vector of logical values the same length as y, with TRUEs corresponding to values of y that are greater than zero and FALSEs corresponding to values of y that are less than or equal to zero. What do you think y[y > 0] will give you?
-  AnswerChoices: A vector of all the positive elements of y; A vector of all the negative elements of y; A vector of all NAs; A vector of length 0; A vector of TRUEs and FALSEs
-  CorrectAnswer: A vector of all the positive elements of y
-  AnswerTests: omnitest(correctVal="A vector of all the positive elements of y")
-  Hint: The logical expression y > 0 will give us TRUE for each element of y that is positive. Based on that, what do you think y[y > 0] will return?
+  Output: Lembre-se que a expressão y > 0 irá nos dar um vetor de valores lógicos do mesmo comprimento que y, com TRUE correspondendo a valores de y que são maiores que zero e FALSE correspondendo a valores de y que são menores ou iguais a zero. O que você acha que y[y>0] irá retornar?
+  AnswerChoices: Um vetor com todos os elementos positivos de y; Um vetor com todos os elementos negativos de y; Uma vetor de todos os NA; Um vetor de comprimento 0; Um vetor de TRUE e FALSE
+  CorrectAnswer: Um vetor com todos os elementos positivos de y
+  AnswerTests: omnitest(correctVal="Um vetor com todos os elementos positivos de y")
+  Hint: A expressão lógica y >0 irá nos devolver TRUE para cada elemento de y que é positivo. Baseado nisso, o que você pensa que y[y >0] irá retornar?
 
 - Class: cmd_question
-  Output: Type y[y > 0] to see that we get all of the positive elements of y, which are also the positive elements of our original vector x.
+  Output: Digite y[y>0] para ver que temos todos os elementos positivos de y, os quais também são elementos positivos do vetor original x
   CorrectAnswer: y[y > 0]
   AnswerTests: omnitest(correctExpr='y[y > 0]')
-  Hint: Type y[y > 0] to view only the positive elements of y.
+  Hint: Digite y[y>0] para ver apenas os elementos positivos de y.
 
 - Class: cmd_question
-  Output: You might wonder why we didn't just start with x[x > 0] to isolate the positive elements of x. Try that now to see why.
+  Output: Você pode pensar que x[x>0] já seria o suficiente para isolar os elementos positivos de x. Tente agora para ver que esta abordagem não funciona.
   CorrectAnswer: x[x > 0]
   AnswerTests: omnitest(correctExpr='x[x > 0]')
-  Hint: Try x[x > 0] to see why we didn't use this approach.
+  Hint:  Tente x[x > 0] para ver o motivo pelo qual nós não usamos esta abordagem.
 
 - Class: text
-  Output: Since NA is not a value, but rather a placeholder for an unknown quantity, the expression NA > 0 evaluates to NA. Hence we get a bunch of NAs mixed in with our positive numbers when we do this.
+  Output: Como NA não é um valor, mais sim um indicador para uma quantidade incerta, a expressão NA>0 é avaliada como NA. Por isso,  temos um monte de NA misturado com nossos elementos positivos quando fazemos isso.
 
 - Class: cmd_question
-  Output: Combining our knowledge of logical operators with our new knowledge of subsetting, we could do this -- x[!is.na(x) & x > 0]. Try it out.
+  Output: Combinando o nosso conhecimento de operadores lógicos com o que vimos nessa aula, nós podemos fazer isso -- x[!is.na(x) & x > 0]. Tente fazer isso.
   CorrectAnswer: x[!is.na(x) & x > 0]
   AnswerTests: omnitest(correctExpr='x[!is.na(x) & x > 0]')
-  Hint: Try x[!is.na(x) & x > 0] to see what you get.
+  Hint: Tente x[!is.na(x) & x>0] para ver o retorna.
 
 - Class: text
-  Output: In this case, we request only values of x that are both non-missing AND greater than zero.
+  Output: Neste caso, nós pedimos apenas valores de x que são diferentes de NA E maiores que zero.
 
 - Class: text
-  Output: I've already shown you how to subset just the first ten values of x using x[1:10]. In this case, we're providing a vector of positive integers inside of the square brackets, which tells R to return only the elements of x numbered 1 through 10.
+  Output: Nós já mostramos com fazer o subconjunto com os 10 primeiros valores de x usando x[1:10]. Nesse caso, nós damos ao vetor números inteiros positivos dentro de colchetes, o qual diz ao R para retornar apenas os elementos de x numerados de 1 até 10.
 
 - Class: text
-  Output: Many programming languages use what's called 'zero-based indexing', which means that the first element of a vector is considered element 0. R uses 'one-based indexing', which (you guessed it!) means the first element of a vector is considered element 1.
+  Output:
+Muitas linguagens de programação são chamadas de 'baseadas em indice zero', o que significa que o primeiro elemento do vetor é considerado o elemento 0. O R usa 'baseado em indice um', o que significa (acredite!) qua o primeiro elemento do vetor é considerado elemento 1.
 
 - Class: cmd_question
-  Output: Can you figure out how we'd subset the 3rd, 5th, and 7th elements of x? Hint -- Use the c() function to specify the element numbers as a numeric vector.
+  Output: Você pode imaginar como nós conseguimos fazer um subconjunto com o terceiro, quinto e sétimo elemento de x?  Dica -- Use a função c() para especificar o número de elementos como um vetor númerico.
   CorrectAnswer: x[c(3, 5, 7)]
   AnswerTests: omnitest(correctExpr='x[c(3, 5, 7)]')
-  Hint: Create a vector of indexes with c(3, 5, 7), then put that inside of the square brackets.
+  Hint: Crie um vetor com os indices c(3,5,7), então coloque entre colchetes
 
 - Class: cmd_question
   Output: It's important that when using integer vectors to subset our vector x, we stick with the set of indexes {1, 2, ..., 40} since x only has 40 elements. What happens if we ask for the zeroth element of x (i.e. x[0])? Give it a try.
