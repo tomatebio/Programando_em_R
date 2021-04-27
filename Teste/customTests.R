@@ -60,8 +60,12 @@ submit_log <- function(){
   encoded_log <- base64encode(temp)
 
   #  answer
-  input<-data.frame(Sys.time(),encoded_log)
-  sheet_append(input, ss=chave, sheet = "Respostas")
+#  input<-data.frame(Sys.time(),encoded_log)
+#  sheet_append(input, ss=chave, sheet = "Respostas")
+cat("Solução tempóraria para envio copie o string")
+cat(encoded_log)
+cat("Envie no formulário www.cc.com")
+
 
    return(TRUE)
 

@@ -108,7 +108,7 @@ Muitas linguagens de programação são chamadas de 'baseadas em indice zero', o
   Hint: Crie um vetor com os indices c(3,5,7), então coloque entre colchetes
 
 - Class: cmd_question
-  Output: It's important that when using integer vectors to subset our vector x, we stick with the set of indexes {1, 2, ..., 40} since x only has 40 elements. What happens if we ask for the zeroth element of x (i.e. x[0])? Give it a try.
+  Output: É importante que quando usamos vetores de inteiros para  fazer um subconjunto do vetor x, nós temos um conjunto de indices {1,2,3 .... ,40} pois o x tem apenas 40 elementos. O que acontece se nós tentarmos pegar o elemento 0 de x (i.e. x[0])? tente isso.
   CorrectAnswer: x[0]
   AnswerTests: omnitest(correctExpr='x[0]')
   Hint: Try x[0] to see what happens when we refer to the zeroth element of a vector, which is not defined in R.
