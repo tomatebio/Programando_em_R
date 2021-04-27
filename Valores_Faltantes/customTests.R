@@ -58,10 +58,12 @@ submit_log <- function(){
   encoded_log <- base64encode(temp)
     #browseURL(paste0(pre_fill_link, encoded_log))
 
-
-  #  answer
-  input<-data.frame(Sys.time(),encoded_log)
-  sheet_append(input, ss=chave, sheet = "Respostas")
-   return(TRUE)
+    #  answer
+  #  input<-data.frame(Sys.time(),encoded_log)
+  #  sheet_append(input, ss=chave, sheet = "Respostas")
+  cat("Solução tempóraria para envio copie o string","\n\n")
+  cat(encoded_log,"\n\n")
+  cat("Envie no formulário https://forms.gle/yGARQSg9YwMq3b3d7")
+     return(TRUE)
 
 }
