@@ -64,7 +64,7 @@ submit_log <- function(){
 #  sheet_append(input, ss=chave, sheet = "Respostas")
 cat("Solução tempóraria para envio copie o string","\n\n")
 cat(encoded_log,"\n\n")
-cat("Envie no formulário www.cc.com")
+cat("Envie no formulário https://forms.gle/yGARQSg9YwMq3b3d7")
 
 
    return(TRUE)
