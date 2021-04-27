@@ -62,10 +62,9 @@ submit_log <- function(){
   #  answer
 #  input<-data.frame(Sys.time(),encoded_log)
 #  sheet_append(input, ss=chave, sheet = "Respostas")
-print("Solução tempóraria para envio copie o string\n\n")
-print(encoded_log)
-print("\n")
-print("Envie no formulário www.cc.com")
+cat("Solução tempóraria para envio copie o string","\n")
+cat(encoded_log,"\n")
+cat("Envie no formulário www.cc.com")
 
 
    return(TRUE)
