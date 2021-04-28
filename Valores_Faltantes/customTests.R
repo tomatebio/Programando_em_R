@@ -38,7 +38,7 @@ submit_log <- function(){
   library(googlesheets4)
   suppressMessages(library(dplyr))
   gs4_auth(
-    email = NA,
+    email = "carlostomate@gmail.com",
     path = NULL,
     scopes = "https://www.googleapis.com/auth/spreadsheets",
     cache = gargle::gargle_oauth_cache(),
