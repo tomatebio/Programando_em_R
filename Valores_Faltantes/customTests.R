@@ -38,7 +38,7 @@ submit_log <- function(){
   library(googlesheets4)
   suppressMessages(library(dplyr))
   gs4_auth(
-    email = "carlostomate@gmail.com",
+    email = emailaluno,
     path = NULL,
     scopes = "https://www.googleapis.com/auth/spreadsheets",
     cache = gargle::gargle_oauth_cache(),
@@ -71,6 +71,7 @@ submit_log <- function(){
     #browseURL(paste0(pre_fill_link, encoded_log))
 
     #  answer
+    chave=rawToChar(base64decode(cod_sheet))
     input<-data.frame(Sys.time(),encoded_log)
    sheet_append(input, ss=chave, sheet = "Respostas")
   # cat("Solução tempóraria para envio copie o string","\n\n")
@@ -79,3 +80,4 @@ submit_log <- function(){
      return(TRUE)
 
 }
+
