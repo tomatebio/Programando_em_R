@@ -9,7 +9,7 @@
 
 - Class: text
   Output: Nessa lição, você irá aprender como usar as funções lapply() e sapply(), os dois membros mais importantes da família de funções *apply no R, também conhecido como funções loop.
-  
+
 - Class: text
   Output: Estas poderosas funções, junto com suas parentes (vapply() e tapply(), entre outras) oferecem meios consistentes e convenientes para implementar a estratégia de Separar-Aplicar-Combinar para analise.
 
@@ -33,9 +33,9 @@
   CorrectAnswer: dim(flags)
   AnswerTests: omnitest(correctExpr='dim(flags)')
   Hint: Digite dim(flags) para ver as dimensões dos dados.
-  
+
 - Class: text
-  Output: Isso nos diz que há 194 linhas, ou observações, e 30 colunas, ou variáveis. Cada observação é um país e cada variável descreve alguma característica desse país ou sua bandeira. Para abrir a descrição completa desse conjunto de dados, digite viewinfo() para ver o arquivo de texto. 
+  Output: Isso nos diz que há 194 linhas, ou observações, e 30 colunas, ou variáveis. Cada observação é um país e cada variável descreve alguma característica desse país ou sua bandeira. Para abrir a descrição completa desse conjunto de dados, digite viewinfo() para ver o arquivo de texto.
 
 - Class: cmd_question
   Output: Como qualquer conjunto de dados, nós gostaríamos de saber qual os formatos das variáveis que estão guardados. Em outras, qual é a classe de cada variável? O que acontece se nós digitarmos class(flags)? Tente isso.
@@ -44,8 +44,8 @@
   Hint: Digite class(flags) para ver o que acontece.
 
 - Class: text
-  Output: Isso apenas nos diz que este conjunto de dados está guardado como um "data.frame", o que não responde nossa questão. O que nós realmente precisamos é aplicar a função class() para cada coluna individualmente. Nós poderíamos fazer isso manualmente (uma coluna por vez) mas é muito mais rápido se pudéssemos automatizar este processo. Ou seja um loop!
-  
+  Output: Isso apenas nos diz que este conjunto de dados está guardado como um "data.frame", o que não responde nossa questão. O que nós realmente precisamos é aplicar a função class() para cada coluna individualmente. Nós poderíamos fazer isso manualmente (uma coluna por vez) mas é muito mais rápido se pudessemos automatizar este processo. Ou seja um loop!
+
 - Class: text
   Output: A função lapply recebe uma lista como entrada, aplica a função para cada elemento dessa lista, e então retorna uma lista como o mesmo comprimento da lista original. Como um data.frame é na verdade uma lista de vetores (como você pode ver com as.list(flags)), nós podemos usar lapply para aplicar a função class() para cada coluna no conjunto de dados flags. Vamos ver isso em ação!
 
@@ -242,4 +242,3 @@
   CorrectAnswer: Sim
   AnswerTests: submit_log()
   Hint: Type a hint.
- 
