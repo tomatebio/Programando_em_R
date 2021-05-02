@@ -113,7 +113,7 @@
   Output: Por último, use a mesma abordagem para observar o sumário dos valores da população para cada um das seis landmass (continentes).
   CorrectAnswer: tapply(flags$population, flags$landmass, summary)
   AnswerTests: omnitest(correctExpr="tapply(flags$population, flags$landmass, summary)")
-  Hint: Você pode ver o sumário das população para cada um dos seis landmass (continentes) chamando tapply() com três argumentos: flags$population, flags$landmass, and summary."
+  Hint: Você pode ver o sumário das população para cada um dos seis landmass (continentes) chamando tapply() com três argumentos= flags$population, flags$landmass, and summary."
 
 - Class: mult_question
   Output: Qual é a maior população (em milhões) para o quarto grupo landmass (continente africano)?
