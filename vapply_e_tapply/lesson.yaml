@@ -15,7 +15,7 @@
 
 
 - Class: text
-  Output: O dataset Flags do UCI Machine Learning Repository contem detalhes de várias nações e suas bandeiras. Mais informação pode ser encontrada em: http://archive.ics.uci.edu/ml/datasets/Flags"
+  Output: O dataset Flags do UCI Machine Learning Repository contem detalhes de várias nações e suas bandeiras. Mais informação pode ser encontrada em http://archive.ics.uci.edu/ml/datasets/Flags"
 
 - Class: text
   Output: Eu guardei os dados em um objeto chamado flags. Se você completou a lição 'lapply e sapply' há algum tempo você pode ver novamente estes dados usando funções como dim(), head(), str() e summary() usando prompt(>). Você pode também digitar viewinfo() no prompt para ver a documentação do dataset. Vamos começar!
