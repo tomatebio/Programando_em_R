@@ -10,7 +10,7 @@
 
 lessonpath <- file.path(.get_course_path(), "Programando_em_R",
                         "vapply_e_tapply")
-)
+
 # Path to dataset
 .datapath <- file.path(.lessonpath, "flag.data.txt")
 # Load dataset
