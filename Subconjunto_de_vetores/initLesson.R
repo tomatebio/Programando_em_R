@@ -3,3 +3,6 @@
 # the lesson.
 
 x <- sample(c(rnorm(20), rep(NA, 20)))
+
+swirl_options(swirl_logging = TRUE)
+source("chaves.r")

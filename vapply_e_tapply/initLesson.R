@@ -28,8 +28,11 @@ viewinfo <- function() {
   return(.infopath)
 }
 
-# Dummy function to advance user past question for which 
+# Dummy function to advance user past question for which
 # correct answer yields an error
 ok <- function() {
   invisible()
 }
+
+swirl_options(swirl_logging = TRUE)
+source("chaves.r")

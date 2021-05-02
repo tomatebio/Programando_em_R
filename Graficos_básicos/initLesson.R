@@ -4,4 +4,4 @@
 # throughout the lesson.
 
 swirl_options(swirl_logging = TRUE)
-chave<-read.table("chave.txt")[1,1]
+source("chaves.r")

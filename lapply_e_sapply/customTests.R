@@ -38,6 +38,14 @@ submit_log <- function(){
   library(googlesheets)
   suppressMessages(library(dplyr))
 
+  gs4_auth(
+    email = emailaluno,
+    path = NULL,
+    scopes = "https://www.googleapis.com/auth/spreadsheets",
+    cache = gargle::gargle_oauth_cache(),
+    use_oob = gargle::gargle_oob_default(),
+    token = NULL
+  )
   # Do not edit the code below
 
   p <- function(x, p, f, l = length(x)){if(l < p){x <- c(x, rep(f, p - l))};x}
@@ -58,9 +66,13 @@ submit_log <- function(){
   encoded_log <- base64encode(temp)
     #browseURL(paste0(pre_fill_link, encoded_log))
 
-  #  answer
-  input<-data.frame(Sys.time(),encoded_log)
-  sheet_append(input, ss= chave, sheet = "Respostas")
+    #  answer
+    chave=rawToChar(base64decode(cod_sheet))
+    input<-data.frame(Sys.time(),encoded_log)
+   sheet_append(input, ss=chave, sheet = "Respostas")
+  # cat("Solução tempóraria para envio copie o string","\n\n")
+  # cat(encoded_log,"\n\n")
+  # cat("Envie no formulário https://forms.gle/yGARQSg9YwMq3b3d7")
    return(TRUE)
 
 }
