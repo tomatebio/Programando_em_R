@@ -98,8 +98,7 @@
   Output: Nós já mostramos com fazer o subconjunto com os 10 primeiros valores de x usando x[1:10]. Nesse caso, nós damos ao vetor números inteiros positivos dentro de colchetes, o qual diz ao R para retornar apenas os elementos de x numerados de 1 até 10.
 
 - Class: text
-  Output:
-Muitas linguagens de programação são chamadas de 'baseadas em indice zero', o que significa que o primeiro elemento do vetor é considerado o elemento 0. O R usa 'baseado em indice um', o que significa (acredite!) qua o primeiro elemento do vetor é considerado elemento 1.
+  Output: Muitas linguagens de programação são chamadas de 'baseadas em indice zero', o que significa que o primeiro elemento do vetor é considerado o elemento 0. O R usa 'baseado em indice um', o que significa (acredite!) qua o primeiro elemento do vetor é considerado elemento 1.
 
 - Class: cmd_question
   Output: Você pode imaginar como nós conseguimos fazer um subconjunto com o terceiro, quinto e sétimo elemento de x?  Dica -- Use a função c() para especificar o número de elementos como um vetor númerico.
