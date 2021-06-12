@@ -15,17 +15,17 @@
   Output: As datas são representadas pela classe "Date" e o tempo por classes 'POSIXct' and 'POSIXlt'. Internalmente, datas são guardadas como número de dias desde 1970-01-01 (primeiro de janeiro de 1970) e o tempo é guardado como número de segundos desde a zero hora do mesmo dia (quando é usada a classe 'POSIXct') ou uma lista de segundos, minutos, horas, etc (quando é usada a classe 'POSIXlt')
 
 - Class: cmd_question
-  Output: Vamos começar usando d1 <- Sys.Date() para obter a data atual e guardar na variável d1. 
+  Output: Vamos começar usando d1 <- Sys.Date() para obter a data atual e guardar na variável d1.
   CorrectAnswer: d1 <- Sys.Date()
   AnswerTests: omnitest(correctExpr='d1 <- Sys.Date()')
   Hint: Digite  d1 <- Sys.Date()  para obter a data atual e guardá-la em uma nova variável chamada d1.
-  
+
 - Class: cmd_question
   Output: Use  a função class() para confirmar que d1 é um objeto Date.
   CorrectAnswer: class(d1)
   AnswerTests: omnitest(correctExpr='class(d1)')
   Hint: class(d1) irá te dizer a classe de d1.
-  
+
 - Class: cmd_question
   Output: Nós podemos usar a função  unclass()  para ver como d1 é internamente. Tente isso agora.
   CorrectAnswer: unclass(d1)
@@ -61,7 +61,7 @@
   CorrectAnswer: t1 <- Sys.time()
   AnswerTests: omnitest(correctExpr='t1 <- Sys.time()')
   Hint: t1 <- Sys.time() irá guardar a data e o tempo (horário) atual na variável t1.
-  
+
 - Class: cmd_question
   Output: Veja o conteúdo de t1.
   CorrectAnswer: t1
@@ -79,7 +79,7 @@
   CorrectAnswer: unclass(t1)
   AnswerTests: omnitest(correctExpr='unclass(t1)')
   Hint: Use unclass(t1)  para ver quantos segundos se passaram desde o início de 1970.
-  
+
 - Class: cmd_question
   Output: Por padrão, Sys.time() retorna um objeto da classe POSIXct, mas nós podemos forcar o resultado de POSIXlt com  as.POSIXlt(Sys.time()). Vamos tentar isso e guardar o resultado em t2.
   CorrectAnswer: t2 <- as.POSIXlt(Sys.time())
@@ -140,12 +140,12 @@
 
 - Class: text
   Output: Frequentemente, datas e tempo de um conjunto de dados estarão em um formato que o R não reconhece. A função strptime() pode ser útil nessa situação.
-  
+
 - Class: text
   Output: strptime() converte um vetor de caracteres para  POSIXlt.  Do mesmo modo, é similar a  as.POSIXlt(), exceto que a entrada não precisa estar no formato particular  (YYYY-MM-DD).
 
 - Class: cmd_question
-  Output: Para ver como isso funciona, crie a variável t3 com a seguinte cadeia de caracteres:  "October 17, 1986 08:24" (incluindo as aspas).
+  Output: Para ver como isso funciona, crie a variável t3 com a seguinte cadeia de caracteres:  "October 17, 1986 08\:24" (incluindo as aspas).
   CorrectAnswer: t3 <- "October 17, 1986 08:24"
   AnswerTests: omnitest(correctExpr='t3 <- "October 17, 1986 08:24"')
   Hint: Guarde  "October 17, 1986 08:24" (incluindo as aspas) em uma nova variável chamada t3.
@@ -160,7 +160,7 @@
   Output: Imprima o conteúdo de  t4.
   CorrectAnswer: t4
   AnswerTests: omnitest(correctExpr='t4')
-  Hint: Digite  t4  para imprimir o conteúdo. 
+  Hint: Digite  t4  para imprimir o conteúdo.
 
 - Class: cmd_question
   Output: Qual é o formato que nós esperamos encontrar. Agora, vamos ver a classe.
@@ -169,7 +169,7 @@
   Hint: Digite  class(t4) para ver a classe.
 
 - Class: text
-  Output: Finalmente, existe um número de operações que você pode fazer com datas e tempos, incluindo operações aritméticos (+ e -) e comparações (<, ==, etc.) 
+  Output: Finalmente, existe um número de operações que você pode fazer com datas e tempos, incluindo operações aritméticos (+ e -) e comparações (<, ==, etc.)
 
 - Class: cmd_question
   Output: A variável t1 contem o tempo no qual ela foi criada (lembre-se que usamos Sys.time()). Confirme que algum tempo se passou desde que t1 foi criada usando o operador  "maior que" para comparar com o tempo atual:  Sys.time()>t1.
@@ -184,7 +184,7 @@
   Hint: Sys.time() - t1 irá mostrar a você a quantidade de tempo que passou desde t1 foi criado.
 
 - Class: text
-  Output: Na mesmo linha de pensamento se aplica para adição e outras operações de comparação. Se você quiser mais controle sobre as unidades sobre as diferenças nos tempos, você pode usar  difftime(),  a qual permite especificar as unidades como parâmetro. 
+  Output: Na mesmo linha de pensamento se aplica para adição e outras operações de comparação. Se você quiser mais controle sobre as unidades sobre as diferenças nos tempos, você pode usar  difftime(),  a qual permite especificar as unidades como parâmetro.
 
 - Class: cmd_question
   Output: Use difftime(Sys.time(), t1, units = 'days') para encontrar a quantidade de tempo em dias  que se passaram desde que t1 foi criado.
@@ -195,7 +195,7 @@
 - Class: text
   Output: Nessa lição, você aprendeu como trabalhar com datas e tempo no R. Enquanto é importante entender o básico, se você trabalhar com datas e tempo com frequência, você pode querer ver o pacote lubridate de Hadley Wickham.
 
-  
+
 - Class: mult_question
   Output: Você quer enviar o log  dessa sessão?
   AnswerChoices: Sim;Não
