@@ -145,16 +145,16 @@
   Output: strptime() converte um vetor de caracteres para  POSIXlt.  Do mesmo modo, é similar a  as.POSIXlt(), exceto que a entrada não precisa estar no formato particular  (YYYY-MM-DD).
 
 - Class: cmd_question
-  Output: Para ver como isso funciona, crie a variável t3 com a seguinte cadeia de caracteres:  "October 17, 1986 08\:24" (incluindo as aspas).
+  Output: 'Para ver como isso funciona, crie a variável t3 com a seguinte cadeia de caracteres:  "October 17, 1986 08:24" (incluindo as aspas).'
   CorrectAnswer: t3 <- "October 17, 1986 08:24"
   AnswerTests: omnitest(correctExpr='t3 <- "October 17, 1986 08:24"')
-  Hint: Guarde  "October 17, 1986 08:24" (incluindo as aspas) em uma nova variável chamada t3.
+  Hint: 'Guarde  "October 17, 1986 08:24" (incluindo as aspas) em uma nova variável chamada t3.'
 
 - Class: cmd_question
   Output: Agora use  strptime(t3, "%B %d, %Y %H:%M") para ajudar o R a converter nosso objeto data/tempo no formato que ele entenda. Atribua o resultado a variável t4. (Você pode olhar a documentação de striptime() para ver melhor como esta função trabalha.
   CorrectAnswer: t4 <- strptime(t3, "%B %d, %Y %H:%M")
   AnswerTests: omnitest(correctExpr='t4 <- strptime(t3, "%B %d, %Y %H:%M")')
-  Hint: 't4 <- strptime(t3, "%B %d, %Y %H:%M") irá converter nosso objeto  data/tempo  em um formato que R entenda.
+  Hint: 't4 <- strptime(t3, "%B %d, %Y %H:%M") irá converter nosso objeto  data/tempo  em um formato que R entenda.'
 
 - Class: cmd_question
   Output: Imprima o conteúdo de  t4.
