@@ -172,7 +172,7 @@
   Output: Finalmente, existe um número de operações que você pode fazer com datas e tempos, incluindo operações aritméticos (+ e -) e comparações (<, ==, etc.)
 
 - Class: cmd_question
-  Output: A variável t1 contem o tempo no qual ela foi criada (lembre-se que usamos Sys.time()). Confirme que algum tempo se passou desde que t1 foi criada usando o operador  "maior que" para comparar com o tempo atual:  Sys.time()>t1.
+  Output: 'A variável t1 contem o tempo no qual ela foi criada (lembre-se que usamos Sys.time()). Confirme que algum tempo se passou desde que t1 foi criada usando o operador  "maior que" para comparar com o tempo atual:  Sys.time()>t1.'
   CorrectAnswer: Sys.time() > t1
   AnswerTests: omnitest(correctExpr='Sys.time() > t1')
   Hint: Sys.time() > t1 irá dizer a você que o tempo atual é depois do tempo contido em t1 (o qual era o tempo atual quando t1 foi criada).
@@ -193,7 +193,7 @@
   Hint: difftime(Sys.time(), t1, units = 'days') irá dizer  quantos dias se passou desde que t1 foi criado (é bom que seja menor que 1!)
 
 - Class: text
-  Output: Nessa lição, você aprendeu como trabalhar com datas e tempo no R. Enquanto é importante entender o básico, se você trabalhar com datas e tempo com frequência, você pode querer ver o pacote lubridate de Hadley Wickham.
+  Output: Nessa lição, você aprendeu como trabalhar com datas e tempo no R.É importante entender o básico, se você trabalhar com datas e tempo com frequência, você pode querer ver o pacote lubridate de Hadley Wickham.
 
 
 - Class: mult_question
