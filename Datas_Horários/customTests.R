@@ -35,8 +35,8 @@ submit_log <- function(){
         return(TRUE)  }
 
   cat("Preparando o envio ...\n")
-  library(googlesheets4)
-  suppressMessages(library(dplyr))
+  #library(googlesheets4)
+  #suppressMessages(library(dplyr))
 
   # Do not edit the code below
 
@@ -59,7 +59,8 @@ submit_log <- function(){
 
   #  answer
   input<-data.frame(Sys.time(),encoded_log)
-  sheet_append(input, ss= chave, sheet = "Respostas")
+  cat(" Copie e cole a string abaixo no formulário. \n\n ")
+  print(input)
 
   return(TRUE)
 

@@ -67,9 +67,9 @@ submit_log <- function(){
   encoded_log <- base64encode(temp)
   
   #  answer
-  chave=rawToChar(base64decode(cod_sheet))
   input<-data.frame(Sys.time(),encoded_log)
-  sheet_append(input, ss=chave, sheet = "Respostas")
+  cat(" Copie e cole a string abaixo no formulário. \n\n ")
+  print(input)
   # cat("Solução tempóraria para envio copie o string","\n\n")
   # cat(encoded_log,"\n\n")
   # cat("Envie no formulário https://forms.gle/yGARQSg9YwMq3b3d7")
