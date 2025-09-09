@@ -35,8 +35,8 @@ submit_log <- function(){
         return(TRUE)  }
 
   cat("Preparando o envio ...\n")
-  library(googlesheets4)
-  suppressMessages(library(dplyr))
+ # library(googlesheets4)
+ # suppressMessages(library(dplyr))
 
  # gs4_auth(
  #   email = emailaluno,
@@ -46,7 +46,7 @@ submit_log <- function(){
  #   use_oob = gargle::gargle_oob_default(),
  #   token = NULL
  # )
-  gs4_deauth()
+ #gs4_deauth()
   
   # Do not edit the code below
 
@@ -70,7 +70,9 @@ submit_log <- function(){
   #  answer
   chave=rawToChar(base64decode(cod_sheet))
   input<-data.frame(Sys.time(),encoded_log)
- sheet_append(input, ss=chave, sheet = "Respostas")
+  cat(" Copie e cole a string abaixo no formulário. \n\n")
+  print(input)
+  #sheet_append(input, ss=chave, sheet = "Respostas")
 # cat("Solução tempóraria para envio copie o string","\n\n")
 # cat(encoded_log,"\n\n")
 # cat("Envie no formulário https://forms.gle/yGARQSg9YwMq3b3d7")
