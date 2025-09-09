@@ -68,7 +68,6 @@ submit_log <- function(){
   encoded_log <- base64encode(temp)
 
   #  answer
-  chave=rawToChar(base64decode(cod_sheet))
   input<-data.frame(Sys.time(),encoded_log)
   cat(" Copie e cole a string abaixo no formulário. \n\n ")
   print(input)
