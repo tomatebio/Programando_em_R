@@ -177,7 +177,7 @@ submit_log <- function(){
   input<-data.frame(Sys.time(),encoded_log)
   cat(" Copie e cole a string abaixo no formulário. \n\n ")
   print(input)
-  write.table(input, file=paste0("SWIRL_",getwd(),"/",date(),".txt"))
+  write.table(input, file="Funcoes.txt")
    return(TRUE)
 
 }
