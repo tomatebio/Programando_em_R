@@ -71,6 +71,7 @@ submit_log <- function(){
   cat(" Copie e cole a string abaixo no formulário. \n\n ")
   print(input)
   write.table(input, file=paste0("SWIRL_",getwd(),"/",date(),".txt"))
+  
   # cat("Solução tempóraria para envio copie o string","\n\n")
   # cat(encoded_log,"\n\n")
   # cat("Envie no formulário https://forms.gle/yGARQSg9YwMq3b3d7")
