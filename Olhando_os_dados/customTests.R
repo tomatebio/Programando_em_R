@@ -35,16 +35,16 @@ submit_log <- function(){
     return(TRUE)  }
   
   cat("Preparando o envio ...\n")
-  library(googlesheets4)
-  suppressMessages(library(dplyr))
-  gs4_auth(
-    email = emailaluno,
-    path = NULL,
-    scopes = "https://www.googleapis.com/auth/spreadsheets",
-    cache = gargle::gargle_oauth_cache(),
-    use_oob = gargle::gargle_oob_default(),
-    token = NULL
-  )
+  # library(googlesheets4)
+  # suppressMessages(library(dplyr))
+  # gs4_auth(
+  #   email = emailaluno,
+  #   path = NULL,
+  #   scopes = "https://www.googleapis.com/auth/spreadsheets",
+  #   cache = gargle::gargle_oauth_cache(),
+  #   use_oob = gargle::gargle_oob_default(),
+  #   token = NULL
+  # )
   
   
   # Do not edit the code below
