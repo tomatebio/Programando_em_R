@@ -189,7 +189,7 @@
 - Class: cmd_question
   Output: Use difftime(Sys.time(), t1, units = 'days') para encontrar a quantidade de tempo em dias  que se passaram desde que t1 foi criado.
   CorrectAnswer: difftime(Sys.time(), t1, units = 'days')
-  AnswerTests: match_call("difftime(Sys.time(), t1, units = 'days')")
+  AnswerTests: omnitest(correctExpr = "difftime(Sys.time(), t1, units = 'days')" )
   Hint: difftime(Sys.time(), t1, units = 'days') irá dizer  quantos dias se passou desde que t1 foi criado (é bom que seja menor que 1!)
 
 - Class: text
